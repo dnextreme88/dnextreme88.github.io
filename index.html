@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin's Portfolio</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css" integrity="sha512-W/zrbCncQnky/EzL+/AYwTtosvrM+YG/V6piQLSe2HuKS6cmbw89kjYkp3tWFn1dkWV7L1ruvJyKbLz73Vlgfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css" integrity="sha512-siarrzI1u3pCqFG2LEzi87McrBmq6Tp7juVsdmGY1Dr8Saw+ZBAzDzrGwX3vgxX1NkioYNCFOVC0GpDPss10zQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css" integrity="sha512-Z/def5z5u2aR89OuzYcxmDJ0Bnd5V1cKqBEbvLOiUNWdg9PQeXVvXLI90SE4QOHGlfLqUnDNVAYyZi8UwUTmWQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.js" integrity="sha512-Ktf+fv0N8ON+ALPwyuXP9d8usxLqqPL5Ox9EHlqxehMM+h1wIU/AeVWFJwVGGFMddw/67P+KGFvFDhZofz2YEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/brands.min.js" integrity="sha512-IZeK0c+nwCpZdoWLUoguVYEnBOwOnS3eTyS5Eg57YCk41x2NphG1E/vSa886whDSXG7vGauI8mmbP5PI/VC5LQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/fontawesome.min.js" integrity="sha512-64O4TSvYybbO2u06YzKDmZfLj/Tcr9+oorWhxzE3yDnmBRf7wvDgQweCzUf5pm2xYTgHMMyk5tW8kWU92JENng==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.min.js" integrity="sha512-fHY2UiQlipUq0dEabSM4s+phmn+bcxSYzXP4vAXItBvBHU7zAM/mkhCZjtBEIJexhOMzZbgFlPLuErlJF2b+0g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header>
+        <!--
+        <nav class="navbar navbar-expand-lg d-flex header-nav">
+            <div class="navbar-brand logo">
+                <a href="#">KD</a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
+                <ul class="navbar-nav d-flex align-items-center justify-content-end m-0 pe-3 list-unstyled nav-links">
+                    <li class="nav-item ms-3"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item ms-3"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item ms-3"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item ms-3"><a class="nav-link" href="#misc-links">Links</a></li>
+                </ul>
+            </div>
+        </nav>
+        -->
+
+        <nav class="navbar navbar-expand-md header-nav">
+            <div class="container-fluid">
+                <a class="navbar-brand ps-2 logo" href="#">KD</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".header-links" aria-controls="header-links" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end text-end header-links">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle about-dropdown-menu-parent" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+                            <ul class="dropdown-menu about-dropdown-menu">
+                                <li><a class="dropdown-item" href="#profile">Profile</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#skills">Skills</a></li>
+                                <li><a class="dropdown-item" href="#home-setup">Home Setup Specs</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#portfolio">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#misc-links">Links</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+          </nav>
+    </header>
+
+    <main>
+        <section class="d-grid text-center hero">
+            <h1 class="w-75 intro">Hi, my name is JEANNE KEVIN ARNMANI T. DECENA</h1>
+        </section>
+
+        <section class="d-grid align-content-center about hidden">
+            <div id="profile">
+                <figure class="mt-4 mx-auto text-center">
+                    <img src="assets/images/img-profile.webp" class="border border-4 border-info rounded-circle" width="300" height="291" alt="My own image" title="My own image" />
+                    <figcaption>JEANNE KEVIN ARNMANI TIBAYAN DECENA</figcaption>
+                </figure>
+    
+                <div class="d-grid mx-auto text-center info">
+                    <div><i class="fa fa-map-marker"></i></div>
+                    <div><span>Baguio City, Philippines 2600</span></div>
+                    <div><i class="fa fa-phone"></i></div>
+                    <div>+639277174174</div>
+                    <div><i class="fa fa-envelope"></i></div>
+                    <div>cross.defect@gmail.com / storm_iz_here@yahoo.com</div>
+                </div>
+    
+                <div class="d-grid my-4 mx-md-auto social-links">
+                    <div><a href="https://www.facebook.com/kevin.tibayan" alt="Facebook link"><i class="fab fa-facebook fa-3x"></i></a></div>
+                    <div><a href="https://github.com/dnextreme88?tab=repositories" alt="GitHub repositories"><i class="fab fa-github fa-3x"></i></a></div>
+                    <div><a href="https://www.linkedin.com/in/jeanne-kevin-decena-b91a1b12a/" alt="LinkedIn link"><i class="fab fa-linkedin fa-3x"></i></a></div>
+                    <div class="d-grid">
+                        <a href="assets/docs/resume.pdf" class="d-flex align-items-center px-2 download-resume" alt="Download resume link" title="Download resume (PDF)" download>
+                            <i class="fa fa-download fa-2x"></i>
+                            <span>Download Resume</span>
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="text-info">
+                    <blockquote class="w-75 about-quote">
+                        An experienced backend developer with a demonstrated history of working in the Information Technology and Services industry. Possesses a Bachelor in Information Technology degree major in Network and Security from the University of the Cordilleras, CAR. Planning to learn Typescript, NestJs, NextJs soon.
+    
+                        <span class="mt-2 d-block fw-bold">Kevin Decena</span>
+                    </blockquote>
+                </div>
+            </div>
+
+            <div class="d-grid my-4 text-center" id="skills">
+                <h2 class="top">Skills <sup><a href="#" class="info-help" data-bs-title="Skills Help" data-bs-content="These are the technologies I have tried." data-toggle="popover"><i class="fa fa-info-circle"></i></a></sup></h2>
+                <div class="left">
+                    <h3 class="skill-title">Frontend</h3>
+
+                    <div class="d-grid mb-2 frontend">
+                        <i class="devicon-bootstrap-plain icon-size"></i></li>
+                        <span class="fw-bold skill-name">Bootstrap</span>
+                        <span class="skill-level">Intermediate</span>
+                    </div>
+
+                    <div class="d-grid mb-2 frontend">
+                        <i class="devicon-css3-plain icon-size"></i></li>
+                        <span class="fw-bold skill-name">CSS 3</span>
+                        <span class="skill-level">Intermediate</span>
+                    </div>
+
+                    <div class="d-grid mb-2 frontend">
+                        <i class="devicon-html5-plain icon-size"></i></li>
+                        <span class="fw-bold skill-name">HTML5</span>
+                        <span class="skill-level">Intermediate</span>
+                    </div>
+
+                    <div class="d-grid mb-2 frontend">
+                        <i class="devicon-javascript-plain icon-size"></i></li>
+                        <span class="fw-bold skill-name">JavaScript</span>
+                        <span class="skill-level">Intermediate</span>
+                    </div>
+
+                    <div class="d-grid mb-2 frontend">
+                        <i class="devicon-jquery-plain icon-size"></i></li>
+                        <span class="fw-bold skill-name">jQuery</span>
+                        <span class="skill-level">Intermediate</span>
+                    </div>
+
+                    <div class="d-grid mb-2 frontend">
+                        <i class="devicon-react-plain icon-size"></i></li>
+                        <span class="fw-bold skill-name">React</span>
+                        <span class="skill-level">Intermediate</span>
+                    </div>
+
+                    <div class="d-grid mb-2 frontend">
+                        <i class="devicon-sass-plain icon-size"></i></li>
+                        <span class="fw-bold skill-name">Sass</span>
+                        <span class="skill-level">Beginner</span>
+                    </div>
+                </div>
+                <div class="middle">
+                    <h3 class="skill-title">Backend</h3>
+
+                    <div class="d-grid mb-2 backend">
+                        <i class="devicon-dotnetcore-plain icon-size"></i></li>
+                        <span class="fw-bold skill-name">.NET Core</span>
+                        <span class="skill-level">Beginner</span>
+                    </div>
+
+                    <div class="d-grid mb-2 backend">
+                        <i class="devicon-csharp-plain icon-size"></i></li>
+                        <span class="fw-bold skill-name">C#</span>
+                        <span class="skill-level">Beginner</span>
+                    </div>
+
+                    <div class="d-grid mb-2 backend">
+                        <i class="devicon-codeigniter-plain icon-size"></i></li>
+                        <span class="fw-bold skill-name">CodeIgniter</span>
+                        <span class="skill-level">Intermediate</span>
+                    </div>
+
+                    <div class="d-grid mb-2 backend">
+                        <i class="devicon-django-plain icon-size"></i></li>
+                        <span class="fw-bold skill-name">Django</span>
+                        <span class="skill-level">Beginner</span>
+                    </div>
+
+                    <div class="d-grid mb-2 backend">
+                        <i class="devicon-express-original icon-size"></i></li>
+                        <span class="fw-bold skill-name">Express</span>
+                        <span class="skill-level">Expert</span>
+                    </div>
+
+                    <div class="d-grid mb-2 backend">
+                        <i class="devicon-java-plain icon-size"></i></li>
+                        <span class="fw-bold skill-name">Java</span>
+                        <span class="skill-level">Beginner</span>
+                    </div>
+
+                    <div class="d-grid mb-2 backend">
+                        <i class="devicon-laravel-plain icon-size"></i></li>
+                        <span class="fw-bold skill-name">Laravel</span>
+                        <span class="skill-level">Intermediate</span>
+                    </div>
+
+                    <div class="d-grid mb-2 backend">
+                        <i class="devicon-mysql-plain icon-size"></i></li>
+                        <span class="fw-bold skill-name">MySQL</span>
+                        <span class="skill-level">Intermediate</span>
+                    </div>
+
+                    <div class="d-grid mb-2 backend">
+                        <i class="devicon-nodejs-plain icon-size"></i></li>
+                        <span class="fw-bold skill-name">NodeJS</span>
+                        <span class="skill-level">Expert</span>
+                    </div>
+
+                    <div class="d-grid mb-2 backend">
+                        <i class="devicon-php-plain icon-size"></i></li>
+                        <span class="fw-bold skill-name">PHP</span>
+                        <span class="skill-level">Expert</span>
+                    </div>
+
+                    <div class="d-grid mb-2 backend">
+                        <i class="devicon-postgresql-plain icon-size"></i></li>
+                        <span class="fw-bold skill-name">PostgreSQL</span>
+                        <span class="skill-level">Intermediate</span>
+                    </div>
+
+                    <div class="d-grid mb-2 backend">
+                        <i class="devicon-python-plain icon-size"></i></li>
+                        <span class="fw-bold skill-name">Python</span>
+                        <span class="skill-level">Beginner</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <h3 class="skill-title">Other Skills</h3>
+
+                    <div class="d-grid mb-2 others">
+                        <i class="devicon-git-plain icon-size"></i></li>
+                        <span class="fw-bold skill-name">Git</span>
+                        <span class="skill-level">Intermediate</span>
+                    </div>
+
+                    <div class="d-grid mb-2 others">
+                        <i class="devicon-graphql-plain icon-size"></i></li>
+                        <span class="fw-bold skill-name">GraphQL</span>
+                        <span class="skill-level">Beginner</span>
+                    </div>
+
+                    <div class="d-grid mb-2 others">
+                        <i class="devicon-wordpress-plain icon-size"></i></li>
+                        <span class="fw-bold skill-name">WordPress</span>
+                        <span class="skill-level">Beginner</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="my-4 text-center" id="home-setup">
+                <h2>Home Setup Specs <sup><a href="#" class="info-help" data-bs-title="Home Setup Specs Help" data-bs-content="Specs for a WFH setup" data-toggle="popover"><i class="fa fa-info-circle"></i></a></sup></h2>
+                <div class="d-grid home-setup-list">
+                    <div>Internet Service Provider (ISP)</div>
+                    <div>PLDT 20Mbp/s</div>
+                    <div>Memory</div>
+                    <div>TEAMGROUP-UD4-3600 T-Force Delta DDR4 RGB 8GB x 2</div>
+                    <div>Webcam</div>
+                    <div>GSou T16s 1080p</div>
+                    <div>Processor</div>
+                    <div>AMD Ryzen 5 2400G with Radeon Vega Graphics</div>
+                    <div>GPU</div>
+                    <div>NVIDIA GeForce GTX 1050 Ti</div>
+                    <div>Motherboard</div>
+                    <div>MSi A320M PRO-VH Plus (MS-7B07)</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="hidden" id="portfolio">
+            <h2>Portfolio</h2>
+            <figure class="mt-4 mx-auto text-center">
+                <img src="assets/images/bg-portfolio-1.webp" class="border border-4" width="300" height="90" alt="GDG DevFest Baguio 2016 image" title="GDG DevFest Baguio 2016 image" />
+                <figcaption>- Volunteered to document the GDG DevFest Baguio 2016 event held on November 5, 2016 at the University of the Cordilleras, Baguio City <small>(<a href="assets/docs/write-up.pdf" title="Download write-up (PDF)" download>download</a>)</small></figcaption>
+            </figure>
+        </section>
+
+        <section class="hidden" id="misc-links">
+            <h2>Miscellaneous Links</h2>
+            <p>Basically anything else that I do that's not related to my IT career.</p>
+            <ul class="w-75 list-unstyled">
+                <li>- <a href="https://www.nexusmods.com/stateofdecay/mods/499" target="_blank">State of Decay: Year One Survival Edition - Add playable Milo Eldridge with Gurubani Kaur (Story Only) mod</a></li>
+                <li>- <a href="https://www.nexusmods.com/stateofdecay/mods/502" target="_blank">State of Decay: Year One Survival Edition - Wider Outpost and Homesite Radius mod</a></li>
+            </ul>
+            <p class="w-75">- I'm also a technical writer, writing simple gaming guides in plaintext format, published at GameFAQs. <a href="https://gamefaqs.gamespot.com/community/dnextreme88/contributions" target="_blank">Here is the link to my contributions page</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="text-center copyright-info">
+            <p>All right reserved.</p>
+            <p>Copyright &copy; <span class="current-year"></span> by Kevin Decena.</p>
+            <p>Per DTI-NCR Permit No. 11022023, Series of 2023.</p>
+        </div>
+    </footer>
+
+    <button class="d-none btn-go-to-top" title="Go to top"><i class="fa fa-caret-up"></i> Top</button>
+</body>
+</html>
