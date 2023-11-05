@@ -14,6 +14,11 @@
 /* RESETS */
 a {
     text-decoration: none;
+    color: #3CB9FC;
+
+    &:hover {
+        color: #08F7FE;
+    }
 }
 
 /* FOR REFERENCE ONLY */
@@ -43,6 +48,10 @@ header {
             font-size: 2rem;
             font-family: 'Neon Retro V2', sans-serif;
             letter-spacing: 0.2em;
+        }
+
+        & .navbar-toggler {
+            background-color: #B537F2;
         }
 
         & .header-links {
@@ -241,10 +250,12 @@ section {
 
 section:nth-child(odd) {
     background-color: purple;
+    padding-inline: 1em;
 }
 
 section:nth-child(even) {
     background-color: #560A86;
+    padding-inline: 1em;
 }
 
 footer {
@@ -294,10 +305,23 @@ footer {
 
 /* Media queries */
 @media (width <= 575px) {
+    img {
+        width: 100% !important;
+    }
+
     .about {
         & .social-links {
             padding-inline: 1em;
             grid-column-gap: 0;
+        }
+
+        & .about-quote {
+            padding: 1.2em 0em 1.2em 1.6em;
+            width: 100% !important;
+
+            &::before {
+                left: 0;
+            }
         }
 
         & #skills {
@@ -305,6 +329,12 @@ footer {
                 'header header header header header header'
                 'left left left middle middle middle'
                 'right right right right right right';
+        }
+
+        & #home-setup {
+            & .home-setup-list {
+                grid-template-columns: 1fr 1fr;
+            }
         }
     }
 }
