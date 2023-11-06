@@ -250,11 +250,13 @@ section {
 
 section:nth-child(odd) {
     background-color: purple;
+    padding-block: 1.5em;
     padding-inline: 1em;
 }
 
 section:nth-child(even) {
     background-color: #560A86;
+    padding-block: 1.5em;
     padding-inline: 1em;
 }
 
@@ -305,7 +307,7 @@ footer {
 
 /* Media queries */
 @media (width <= 575px) {
-    img {
+    #portfolio img, #misc-links #img {
         width: 100% !important;
     }
 
@@ -316,7 +318,7 @@ footer {
         }
 
         & .about-quote {
-            padding: 1.2em 0em 1.2em 1.6em;
+            padding: 1.2em 0.6em 1.2em 1.6em;
             width: 100% !important;
 
             &::before {
