@@ -2,8 +2,11 @@ $(document).ready(function() {
     $('[data-toggle="popover"]').popover();
 });
 
-$(document).on('click', '.info-help', function(e) {
-    e.preventDefault();
+const infoHelp = Object.values(document.getElementsByClassName('info-help'));
+infoHelp.forEach(popover => {
+    popover.addEventListener('click', e => {
+        e.preventDefault();
+    });
 });
 
 const currentYear = document.getElementsByClassName('current-year')[0];
