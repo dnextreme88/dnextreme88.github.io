@@ -65,6 +65,8 @@ document.getElementById('clear-search-input').addEventListener('click', e => {
 function searchAndFilter() {
     const startTime = performance.now();
 
+    $('[data-toggle="popover"]').popover('hide');
+
     isFiltering = true;
     const searchValue = document.getElementById('search-archives-input').value.toLowerCase();
     const alert = document.getElementsByClassName('no-results-found')[0];
@@ -94,11 +96,16 @@ function searchAndFilter() {
 }
 
 function resetData() {
+    $('[data-toggle="popover"]').popover('hide');
+
     isFiltering = false;
     filteredItems = [];
 
     const alert = document.getElementsByClassName('no-results-found')[0];
+    const alertHasResults = document.getElementsByClassName('has-results-found')[0];
+
     toggleElementDisplay(alert, 'hide');
+    toggleElementDisplay(alertHasResults, 'hide');
 
     currentPage = 1;
     changePage(currentPage, allItems);
