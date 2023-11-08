@@ -103,14 +103,17 @@ function generateMarkup(items) {
     for (let index = 0; index < items.length; index++) {
         itemsMarkup.push(`
             <figure class="d-block">
-                <figcaption>${items[index]['name']}
+                <figcaption class="item-title">${items[index]['name']}
                     ${items[index].hasOwnProperty('notes') ?
                     `<sup><a href="#" class="archives-help" data-bs-title="Notes Help" data-bs-content="${items[index]['notes']}" data-toggle="popover"><i class="fa fa-info-circle" title="Notes"></i></a></sup>` :
                     ''
                 }
                 </figcaption>
 
-                <img src="assets/images/${items[index]['imageLocation']}" class="mb-2 border border-4 border-info rounded-circle" width="240" height="240" loading="lazy" />
+                <div class="mb-2 mx-auto img-container" data-img-location="assets/images/${items[index]['imageLocation']}">
+                    <div class="mx-auto loader"></div>
+                    <span class="position-relative loader-text">Loading</span>
+                </div>
 
                 <table class="table table-striped">
                     <tr class="price">
@@ -188,6 +191,28 @@ function changePage(page, itemsArray) {
 
     itemsInPageMarkup = generateMarkup(itemsInPage);
     elementToPopulate.innerHTML = itemsInPageMarkup.join('');
+
+    const itemImages = Object.values(document.getElementsByClassName('img-container'));
+    itemImages.forEach(image => {
+        const url = image.getAttribute('data-img-location');
+
+        const img = document.createElement('img');
+        img.setAttribute('src', image.getAttribute('data-img-location'));
+        img.setAttribute('class', 'mb-2 border border-4 rounded-circle lazyloading');
+        img.setAttribute('width', 240);
+        img.setAttribute('height', 240);
+        img.setAttribute('loading', 'lazy');
+        image.appendChild(img);
+
+        img.addEventListener('load', function() {
+            image.getElementsByClassName('loader')[0].remove();
+            image.getElementsByClassName('loader-text')[0].remove();
+
+            img.classList.remove('lazyloading');
+            img.classList.add('lazyloaded');
+            console.log('Loaded:', url);
+        });
+    });
 
     const nextButton = document.getElementById('btn-next');
     const prevButton = document.getElementById('btn-prev');

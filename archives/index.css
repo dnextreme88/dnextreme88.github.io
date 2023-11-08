@@ -1,5 +1,5 @@
 main {
-    background-color: purple;
+    background-color: #120052;
 
     & .search-form {
         grid-template-columns: 3fr 1fr;
@@ -18,6 +18,99 @@ main {
 
     & #archives-list {
         grid-template-columns: 1fr 1fr 1fr;
+
+        & .item-title {
+            min-height: 50px;
+        }
+
+        & .img-container {
+            /* Width and height should be the same with the img values to prevent layout shifts */
+            width: 240px;
+            height: 240px;
+
+            /* REF: https://www.youtube.com/watch?v=4EOUMLgK5Xw */
+            & .loader {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background: linear-gradient(45deg, transparent, transparent 40%, #e5f403);
+                animation: loader-ring 1.5s linear infinite;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: linear-gradient(45deg, transparent, transparent 40%, #e5f403);
+                    border-radius: 50%;
+                    z-index: 1;
+                    filter: blur(30px);
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 6px;
+                    left: 6px;
+                    right: 6px;
+                    bottom: 6px;
+                    background: #000;
+                    border-radius: 50%;
+                    z-index: 1000;
+                }
+            }
+
+            & .loader-text {
+                bottom: 50%;
+
+                &::after {
+                    overflow: hidden;
+                    display: inline-block;
+                    vertical-align: bottom;
+                    -webkit-animation: animation-ellipsis steps(4, end) 1200ms 5;
+                    animation: animation-ellipsis steps(4, end) 1200ms 5;
+                    content: "\2026";
+                    width: 0;
+                }
+            }
+
+            & img {
+                &.lazyloading {
+                    position: relative;
+                    bottom: 110%;
+                    visibility: hidden;
+                }
+
+                &.lazyloaded {
+                    bottom: 0;
+                    visibility: visible;
+                    border-color: #B537F2 !important;
+                }
+            }
+        }
+
+        & .table {
+            & tr {
+                &:nth-child(odd) {
+                    & td {
+                        background-color: #560A86;
+                        color: white;
+                        border-bottom-color: #AAA;
+                    }
+                }
+
+                &:nth-child(even) {
+                    & td {
+                        background-color: #B537F2;
+                        color: white;
+                        border-bottom-color: #AAA;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -41,5 +134,30 @@ footer {
         & #archives-list {
             grid-template-columns: 1fr 1fr;
         }
+    }
+}
+
+/* Keyframes */
+@keyframes animation-ellipsis {
+    to {
+        width: 0.75em;
+    }
+}
+
+@-webkit-keyframes animation-ellipsis {
+    to {
+        width: 0.75em;
+    }
+}
+
+@keyframes loader-ring {
+    0% {
+        transform: rotate(0deg);
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        filter: hue-rotate(360deg);
     }
 }
