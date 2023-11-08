@@ -1,12 +1,25 @@
 import { items } from "./archives_items.js";
 
+var numbersAndLettersKeyCodes = [];
 var currentPage = 1;
 var recordsPerPage = 18;
 var allItems = [];
 var filteredItems = [];
 var isFiltering = false;
 
-$(document).ready(function() {
+$(document).ready(function () {
+    for (let i = 48; i < 106; i++) {
+        if (i == 58) {
+            i += 6;
+        } else if (i == 91) {
+            i += 4;
+        } else {
+            numbersAndLettersKeyCodes.push(i);
+        }
+    }
+
+    numbersAndLettersKeyCodes = numbersAndLettersKeyCodes.concat([8, 13, 32, 46, 189, 190, 191, 220, 222]);
+
     allItems = items;
 
     changePage(1, allItems);
@@ -40,7 +53,9 @@ goToTopButton.addEventListener('click', function() {
 document.body.onscroll = toggleBackToTopDisplay;
 
 document.getElementById('search-archives-input').addEventListener('keyup', e => {
-    searchAndFilter();
+    if (numbersAndLettersKeyCodes.includes(e.keyCode)) {
+        searchAndFilter();
+    }
 });
 
 document.getElementById('clear-search-input').addEventListener('click', e => {
