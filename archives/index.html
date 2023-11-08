@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin's Portfolio</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css" integrity="sha512-W/zrbCncQnky/EzL+/AYwTtosvrM+YG/V6piQLSe2HuKS6cmbw89kjYkp3tWFn1dkWV7L1ruvJyKbLz73Vlgfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css" integrity="sha512-siarrzI1u3pCqFG2LEzi87McrBmq6Tp7juVsdmGY1Dr8Saw+ZBAzDzrGwX3vgxX1NkioYNCFOVC0GpDPss10zQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css" integrity="sha512-Z/def5z5u2aR89OuzYcxmDJ0Bnd5V1cKqBEbvLOiUNWdg9PQeXVvXLI90SE4QOHGlfLqUnDNVAYyZi8UwUTmWQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="../style.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.js" integrity="sha512-Ktf+fv0N8ON+ALPwyuXP9d8usxLqqPL5Ox9EHlqxehMM+h1wIU/AeVWFJwVGGFMddw/67P+KGFvFDhZofz2YEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/brands.min.js" integrity="sha512-IZeK0c+nwCpZdoWLUoguVYEnBOwOnS3eTyS5Eg57YCk41x2NphG1E/vSa886whDSXG7vGauI8mmbP5PI/VC5LQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/fontawesome.min.js" integrity="sha512-64O4TSvYybbO2u06YzKDmZfLj/Tcr9+oorWhxzE3yDnmBRf7wvDgQweCzUf5pm2xYTgHMMyk5tW8kWU92JENng==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.min.js" integrity="sha512-fHY2UiQlipUq0dEabSM4s+phmn+bcxSYzXP4vAXItBvBHU7zAM/mkhCZjtBEIJexhOMzZbgFlPLuErlJF2b+0g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="../app.js" defer></script>
+
+    <!-- ADDITIONAL -->
+    <link rel="stylesheet" href="index.css" />
+
+    <script src="index.js" type="module" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md header-nav">
+            <div class="container-fluid">
+                <a class="navbar-brand ps-2 logo" href="/">KD</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".header-links" aria-controls="header-links" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end text-end header-links">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+          </nav>
+    </header>
+
+    <main>
+        <section class="mb-2 mx-4 d-grid text-center">
+            <form class="mt-4 d-grid search-form">
+                <input class="me-1" id="search-archives-input" type="text" placeholder="Search the archives..." title="Search box" />
+                <input class="btn btn-danger ml-1" id="clear-search-input" type="reset" value="Clear" />
+            </form>
+        </section>
+
+        <section class="my-2 mx-4 d-grid text-center">
+            <!-- PRE-POPULATED WHEN SEARCHING. THESE ARE JUST PLACEHOLDERS -->
+            <div class="alert alert-success d-none text-start has-results-found"><i class="fas fa-check-circle"></i> Your search took <span class="filter-elapsed-time">X</span> seconds and returned <span class="filter-num-results">Y of Z results.</span></div>
+        </section>
+
+        <!-- PRE-POPULATED -->
+        <section class="my-2 mx-4 d-grid text-center" id="archives-list"></section>
+
+        <section class="mt-2 mx-4 text-center">
+            <div class="alert alert-danger d-none text-start no-results-found"><i class="fas fa-triangle-exclamation"></i> No results were found.</div>
+
+            <a href="#" id="btn-prev">Prev</a>
+            <a href="#" id="btn-next">Next</a>
+
+            <p class="mb-0">Page: <span id="page"></span></p>
+        </section>
+    </main>
+
+    <footer>
+        <ul class="ms-4 pt-2 list-unstyled">
+            <li><a href="#" class="disabled">Archives</a></li>
+        </ul>
+
+        <div class="text-center">
+            <p>All right reserved.</p>
+            <p>Copyright &copy; <span class="current-year"></span> by Kevin Decena.</p>
+            <p>Per DTI-NCR Permit No. 11022023, Series of 2023.</p>
+        </div>
+    </footer>
+
+    <button class="d-none btn-go-to-top" title="Go to top"><i class="fa fa-caret-up"></i> Top</button>
+</body>
+</html>

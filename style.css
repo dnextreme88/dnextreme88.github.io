@@ -79,10 +79,8 @@ header {
 }
 
 footer {
-    .copyright-info {
-        background-color: #560A86;
-        border-radius: 8px;
-    }
+    background-color: #560A86;
+    border-radius: 8px;
 }
 
 .btn-go-to-top {
