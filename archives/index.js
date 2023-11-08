@@ -127,7 +127,7 @@ function generateMarkup(items) {
             <figure class="d-block">
                 <figcaption class="item-title">${items[index]['name']}
                     ${items[index].hasOwnProperty('notes') ?
-                    `<sup><a href="#" class="archives-help" data-bs-title="Notes Help" data-bs-content="${items[index]['notes']}" data-toggle="popover"><i class="fa fa-info-circle" title="Notes"></i></a></sup>` :
+                    `<sup><a href="#" class="archives-help" data-bs-title="Notes Help" data-bs-content="${items[index]['notes']}" data-toggle="popover" aria-label="Toggle archives help" aria-haspopup="dialog"><i class="fa fa-info-circle" title="Notes"></i></a></sup>` :
                     ''
                 }
                 </figcaption>
@@ -223,6 +223,8 @@ function changePage(page, itemsArray) {
         img.setAttribute('class', 'mb-2 border border-4 rounded-circle lazyloading');
         img.setAttribute('width', 240);
         img.setAttribute('height', 240);
+        img.setAttribute('title', 'Item image');
+        img.setAttribute('alt', 'Item image');
         img.setAttribute('loading', 'lazy');
         image.appendChild(img);
 
