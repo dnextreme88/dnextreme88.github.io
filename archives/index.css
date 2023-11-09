@@ -87,7 +87,7 @@ main {
                 &.lazyloaded {
                     bottom: 0;
                     visibility: visible;
-                    border-color: #B537F2 !important;
+                    border-color: #AE28F1 !important;
                 }
             }
         }
@@ -104,7 +104,7 @@ main {
 
                 &:nth-child(even) {
                     & td {
-                        background-color: #B537F2;
+                        background-color: #AE28F1;
                         color: white;
                         border-bottom-color: #AAA;
                     }

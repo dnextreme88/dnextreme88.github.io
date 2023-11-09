@@ -3,21 +3,27 @@
 
 @font-face {
     font-family: 'Neon Retro';
-    src: url('assets/fonts/NirmanaVisual-Regular.otf') format('opentype');
+    src: 
+        url('assets/fonts/NirmanaVisual-Regular.otf') format('opentype'),
+        url('https://fonts.googleapis.com/css?family=Poppins:wght@200;400;700&display=swap') format('woff2');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Neon Retro V2';
-    src: url('assets/fonts/Neonblitz.ttf') format('truetype');
+    src: 
+        url('assets/fonts/Neonblitz.ttf') format('truetype'),
+        url('https://fonts.googleapis.com/css?family=Poppins:wght@200;400;700&display=swap') format('woff2');
+    font-display: swap;
 }
 
 /* RESETS */
 a {
     text-decoration: none;
-    color: #3CB9FC;
+    color: #08F7FE;
 
     &:hover {
-        color: #08F7FE;
+        color: #3CB9FC;
     }
 }
 
@@ -26,7 +32,7 @@ a {
 REF: https://www.shutterstock.com/blog/neon-color-palettes
 $color-retro-light-blue: #3CB9FC;
 $color-retro-dark-blue: #120052;
-$color-retro-light-purple: #B537F2;
+$color-retro-light-purple: #AE28F1;
 $color-retro-dark-purple: #560A86;
 */
 
@@ -51,18 +57,18 @@ header {
         }
 
         & .navbar-toggler {
-            background-color: #B537F2;
+            background-color: #AE28F1;
         }
 
         & .header-links {
             & .about-dropdown-menu-parent {
                 &.show {
-                    color: #B537F2;
+                    color: #AE28F1;
                 }
             }
 
             & .about-dropdown-menu {
-                background-color: #B537F2;
+                background-color: #AE28F1;
             }
         }
 
@@ -72,7 +78,7 @@ header {
             color: #FFF;
 
             &:hover {
-                color: #B537F2;
+                color: #AE28F1;
             }
         }
     }
@@ -88,9 +94,9 @@ footer {
     bottom: 3%;
     right: 3%;
     z-index: 2;
-    font-size: 16px;
-    border: 1px solid #B537F2;
-    background-color: #B537F2;
+    font-size: 1rem;
+    border: 1px solid #AE28F1;
+    background-color: #AE28F1;
     color: white;
     cursor: pointer;
     padding: 0.8em 0.6em;
@@ -110,7 +116,7 @@ footer {
 
 .popover {
     & .popover-header {
-        background-color: #B537F2;
+        background-color: #AE28F1;
     }
 }
 
