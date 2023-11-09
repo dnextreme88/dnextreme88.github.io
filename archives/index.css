@@ -121,7 +121,7 @@ footer {
     }
 }
 
-@media (width <= 575px) {
+@media (width <= 768px) {
     main {
         & #archives-list {
             grid-template-columns: 1fr;
@@ -129,7 +129,7 @@ footer {
     }
 }
 
-@media (575px <= width <= 768px) {
+@media (768px <= width <= 992px) {
     main {
         & #archives-list {
             grid-template-columns: 1fr 1fr;
