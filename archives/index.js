@@ -1,3 +1,4 @@
+import { getTop5HighestPricesChart, getTop5BrandsChart, getTop5MonthsChart } from './archives_charts.js';
 import { items } from "./archives_items.js";
 
 var numbersAndLettersKeyCodes = [];
@@ -38,6 +39,11 @@ $(document).ready(function () {
 
         nextPage();
     });
+
+    // Charts
+    getTop5HighestPricesChart(allItems);
+    getTop5BrandsChart(allItems);
+    getTop5MonthsChart(allItems);
 
     console.log('Archives script initialized.');
 });
@@ -140,7 +146,7 @@ function generateMarkup(items) {
                 <table class="table table-striped">
                     <tr class="price">
                         <td>Price</td>
-                        <td>${items[index]['price']}</td>
+                        <td>&#8369; ${Number(items[index]['price']).toLocaleString()}</td>
                     </tr>
                     <tr>
                         <td>Condition</td>

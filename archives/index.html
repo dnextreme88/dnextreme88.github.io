@@ -19,6 +19,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.js" integrity="sha512-Ktf+fv0N8ON+ALPwyuXP9d8usxLqqPL5Ox9EHlqxehMM+h1wIU/AeVWFJwVGGFMddw/67P+KGFvFDhZofz2YEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/fontawesome.min.js" integrity="sha512-64O4TSvYybbO2u06YzKDmZfLj/Tcr9+oorWhxzE3yDnmBRf7wvDgQweCzUf5pm2xYTgHMMyk5tW8kWU92JENng==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.min.js" integrity="sha512-fHY2UiQlipUq0dEabSM4s+phmn+bcxSYzXP4vAXItBvBHU7zAM/mkhCZjtBEIJexhOMzZbgFlPLuErlJF2b+0g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <script src="../app.js" defer></script>
 
@@ -48,9 +49,35 @@
     </header>
 
     <main>
-        <section class="mb-2 mx-4 d-grid text-center">
+        <section class="mb-2 mx-4 d-grid text-center position-relative chart-container">
+            <ul class="nav nav-tabs mt-2 border-bottom-0 justify-content-end chart-tabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="top5-chart1-tab" data-bs-toggle="tab" data-bs-target="#top5-chart1" type="button" role="tab" aria-controls="top5-chart1" aria-selected="true" aria-hidden="false">Top 5 Most Expensive Items</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="top5-chart2-tab" data-bs-toggle="tab" data-bs-target="#top5-chart2" type="button" role="tab" aria-controls="top5-chart2" aria-selected="false" aria-hidden="true">Top 5 Brands</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="top5-chart3-tab" data-bs-toggle="tab" data-bs-target="#top5-chart3" type="button" role="tab" aria-controls="top5-chart3" aria-selected="false" aria-hidden="true">Top 5 Months</button>
+                </li>
+            </ul>
+
+            <nav class="tab-content">
+                <div class="tab-pane active" id="top5-chart1" role="tabpanel" aria-labelledby="top5-chart1-tab">
+                    <canvas class="w-100" id="top5-highest-prices-chart" aria-label="Top 5 archive items with highest prices" role="img"></canvas>
+                </div>
+                <div class="tab-pane" id="top5-chart2" role="tabpanel" aria-labelledby="top5-chart2-tab">
+                    <canvas class="w-100" id="top5-most-items-sold-brands-chart" aria-label="Top 5 archive items with most items sold by brand" role="img"></canvas>
+                </div>
+                <div class="tab-pane" id="top5-chart3" role="tabpanel" aria-labelledby="top5-chart3-tab">
+                    <canvas class="w-100" id="top5-most-items-sold-months-chart" aria-label="Top 5 archive items with most items sold by month" role="img"></canvas>
+                </div>
+            </nav>
+        </section>
+
+        <section class="my-2 mx-4 d-grid text-center">
             <form class="mt-4 d-grid search-form">
-                <input class="me-1" id="search-archives-input" type="text" placeholder="Search the archives..." title="Search archives input" aria-placeholder="Search the archives..." aria-/>
+                <input class="me-1" id="search-archives-input" type="text" placeholder="Search the archives..." title="Search archives input" aria-placeholder="Search the archives..." />
                 <input class="btn btn-danger ml-1" id="clear-search-input" type="reset" value="Clear" />
             </form>
         </section>

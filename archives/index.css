@@ -1,6 +1,37 @@
 main {
     background-color: #120052;
 
+    & .chart-container {
+        & .chart-tabs {
+            background-color: #17233b;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+
+            & .nav-item {
+                & .nav-link {
+                    color: white;
+
+                    &.active {
+                        color: #01434C;
+                    }
+                }
+            }
+        }
+
+        & .tab-content {
+            & .tab-pane {
+                & #top5-highest-prices-chart, & #top5-most-items-sold-brands-chart, & #top5-most-items-sold-months-chart {
+                    height: 50vh !important;
+                    background-color: white;
+                    border: 2px solid #AAA;
+                    border-bottom-left-radius: 8px;
+                    border-bottom-right-radius: 8px;
+                    box-shadow: 4px 6px 8px #888;
+                }
+            }
+        }
+    }
+
     & .search-form {
         grid-template-columns: 3fr 1fr;
 
@@ -123,6 +154,18 @@ footer {
 
 @media (width <= 768px) {
     main {
+        & .chart-container {
+            & .chart-tabs {
+                & .nav-item {
+                    width: 100%;
+
+                    & .nav-link {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
         & #archives-list {
             grid-template-columns: 1fr;
         }
