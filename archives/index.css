@@ -32,18 +32,40 @@ main {
         }
     }
 
-    & .search-form {
-        grid-template-columns: 3fr 1fr;
+    & #accordion-form-container {
+        & .simple-form {
+            grid-template-columns: 3fr 1fr;
 
-        & #search-archives-input {
-            border: 1px solid mediumvioletred;
-            border-radius: 10px;
-            padding: 0.25em 0.75em;
-            outline: none;
+            & #search-archives-input {
+                border: 1px solid mediumvioletred;
+                border-radius: 10px;
+                outline: none;
+                padding: 0.25em 0.75em;
 
-            &:focus {
-                border: 2px solid green !important;
+                &:focus {
+                    border: 2px solid #FE53BB !important;
+                }
             }
+        }
+
+        & .advanced-form {
+            & #archive-brands-choice {
+                border-radius: 8px;
+                border: 1px solid black;
+                min-width: 220px;
+                padding: 0.25em 0.5em;
+            }
+
+            & select {
+                border-radius: 8px;
+                min-width: 220px;
+                padding: 0.25em 0.5em;
+            }
+        }
+
+        & .accordion-button:not(.collapsed) {
+            background-color: #FE53BB;
+            color: white;
         }
     }
 
@@ -163,6 +185,12 @@ footer {
                         width: 100%;
                     }
                 }
+            }
+        }
+
+        & #accordion-form-container {
+            & .simple-form {
+                grid-template-columns: 1fr;
             }
         }
 
