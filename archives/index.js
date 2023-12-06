@@ -126,8 +126,8 @@ function searchAndFilter(type) {
         const monthChoice = document.getElementById('archive-months-choice').value;
         const yearChoice = document.getElementById('archive-years-choice').value;
         const brandChoice = document.getElementById('archive-brands-choice').value.toLowerCase();
-
-        console.log('choices:', { monthChoice, yearChoice, brandChoice });
+        const notesChoice = document.getElementById('archive-notes-choice').checked;
+        const isSortAlphaChoice = document.getElementById('archive-is-sort-alpha-choice').checked;
 
         filteredItems = allItems.filter(obj => {
             return (
@@ -137,8 +137,18 @@ function searchAndFilter(type) {
             ) && (
                 ((brandChoice !== '' || brandChoice !== 'show all') && obj.name.toLowerCase().startsWith(brandChoice)) ||
                 ((brandChoice == '' || brandChoice == 'show all') && /.*/.test(obj.name))
+            ) && (
+                (notesChoice && obj.hasOwnProperty('notes')) || !notesChoice
             );
         });
+
+        if (isSortAlphaChoice) {
+            filteredItems.sort(function(a, b) {
+                return a.name === b.name ? 0 : a.name < b.name ? - 1 : 1;
+            });
+        }
+
+        console.log('choices:', { monthChoice, yearChoice, brandChoice, notesChoice });
     }
 
     console.log('filteredItems:', filteredItems);
