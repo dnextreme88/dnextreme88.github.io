@@ -1,5 +1,7 @@
-import { items } from "./archives_items.js";
+import { getTop5HighestPricesChart, getTop5BrandsChart, getTop5MonthsChart } from './archives_charts.js';
+import { items, brands, months } from './archives_items.js';
 
+const currentYear = new Date().getFullYear();
 var numbersAndLettersKeyCodes = [];
 var currentPage = 1;
 var recordsPerPage = 18;
@@ -39,11 +41,33 @@ $(document).ready(function () {
         nextPage();
     });
 
+    const archiveMonths = document.getElementById('archive-months-choice');
+    months.forEach((month, index) => {
+        var monthIndex = index + 1;
+        monthIndex = `${monthIndex < 10 ? '0' + monthIndex : monthIndex}`;
+
+        archiveMonths.innerHTML += `<option value="${monthIndex}">${month}</option>`;
+    });
+
+    const archiveYears = document.getElementById('archive-years-choice');
+    for (let i = 2014; i <= currentYear; i++) {
+        archiveYears.innerHTML += `<option value="${i}">${i}</option>`;
+    }
+
+    const archiveBrands = document.getElementById('archive-brands');
+    brands.forEach(brand => {
+        archiveBrands.innerHTML += `<option value="${brand}"></option>`;
+    });
+
+    // Charts
+    getTop5HighestPricesChart(allItems);
+    getTop5BrandsChart(allItems);
+    getTop5MonthsChart(allItems);
+
     console.log('Archives script initialized.');
 });
 
-const currentYear = document.getElementsByClassName('current-year')[0];
-currentYear.innerHTML = new Date().getFullYear();
+document.getElementsByClassName('current-year')[0].innerHTML = currentYear;
 
 const goToTopButton = document.getElementsByClassName('btn-go-to-top')[0];
 goToTopButton.addEventListener('click', function() {
@@ -54,23 +78,37 @@ document.body.onscroll = toggleBackToTopDisplay;
 
 document.getElementById('search-archives-input').addEventListener('keyup', e => {
     if (numbersAndLettersKeyCodes.includes(e.keyCode)) {
-        searchAndFilter();
+        searchAndFilter('simple');
     }
+});
+
+document.getElementById('filter-result').addEventListener('click', e => {
+    e.preventDefault();
+
+    searchAndFilter('advanced');
 });
 
 document.getElementById('clear-search-input').addEventListener('click', e => {
     resetData();
 });
 
-function searchAndFilter() {
+document.getElementById('clear-filter-input').addEventListener('click', e => {
+    resetData();
+});
+
+/**
+ * Apply filtering on archive items
+ *
+ * @param   {string} type - Determines how to handle the filter
+ * @returns void
+ */
+function searchAndFilter(type) {
     const startTime = performance.now();
 
     $('[data-toggle="popover"]').popover('hide');
 
     isFiltering = true;
-    const searchValue = document.getElementById('search-archives-input').value.toLowerCase();
     const alert = document.getElementsByClassName('no-results-found')[0];
-
     const alertHasResults = document.getElementsByClassName('has-results-found')[0];
     const filterElapsedTime = document.getElementsByClassName('filter-elapsed-time')[0];
 
@@ -80,7 +118,40 @@ function searchAndFilter() {
     const archivesList = document.getElementById('archives-list');
     archivesList.innerHTML = '';
 
-    filteredItems = allItems.filter(object => Object.values(object).some(i => String(i).toLowerCase().includes(searchValue)));
+    if (type == 'simple') {
+        const searchValue = document.getElementById('search-archives-input').value.toLowerCase();
+
+        filteredItems = allItems.filter(object => Object.values(object).some(i => String(i).toLowerCase().includes(searchValue)));
+    } else {
+        const monthChoice = document.getElementById('archive-months-choice').value;
+        const yearChoice = document.getElementById('archive-years-choice').value;
+        const brandChoice = document.getElementById('archive-brands-choice').value.toLowerCase();
+        const notesChoice = document.getElementById('archive-notes-choice').checked;
+        const isSortAlphaChoice = document.getElementById('archive-is-sort-alpha-choice').checked;
+
+        filteredItems = allItems.filter(obj => {
+            return (
+                (monthChoice !== '' && obj.dateSold.includes(`-${monthChoice}-`)) || (monthChoice == '' && /.*/.test(obj.dateSold))
+            ) && (
+                (yearChoice !== '' && obj.dateSold.includes(`${yearChoice}-`)) || (yearChoice == '' && /.*/.test(obj.dateSold))
+            ) && (
+                ((brandChoice !== '' || brandChoice !== 'show all') && obj.name.toLowerCase().startsWith(brandChoice)) ||
+                ((brandChoice == '' || brandChoice == 'show all') && /.*/.test(obj.name))
+            ) && (
+                (notesChoice && obj.hasOwnProperty('notes')) || !notesChoice
+            );
+        });
+
+        if (isSortAlphaChoice) {
+            filteredItems.sort(function(a, b) {
+                return a.name === b.name ? 0 : a.name < b.name ? - 1 : 1;
+            });
+        }
+
+        console.log('choices:', { monthChoice, yearChoice, brandChoice, notesChoice });
+    }
+
+    console.log('filteredItems:', filteredItems);
 
     changePage(1, filteredItems);
 
@@ -140,7 +211,7 @@ function generateMarkup(items) {
                 <table class="table table-striped">
                     <tr class="price">
                         <td>Price</td>
-                        <td>${items[index]['price']}</td>
+                        <td>&#8369; ${Number(items[index]['price']).toLocaleString()}</td>
                     </tr>
                     <tr>
                         <td>Condition</td>

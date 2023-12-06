@@ -19,6 +19,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.js" integrity="sha512-Ktf+fv0N8ON+ALPwyuXP9d8usxLqqPL5Ox9EHlqxehMM+h1wIU/AeVWFJwVGGFMddw/67P+KGFvFDhZofz2YEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/fontawesome.min.js" integrity="sha512-64O4TSvYybbO2u06YzKDmZfLj/Tcr9+oorWhxzE3yDnmBRf7wvDgQweCzUf5pm2xYTgHMMyk5tW8kWU92JENng==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.min.js" integrity="sha512-fHY2UiQlipUq0dEabSM4s+phmn+bcxSYzXP4vAXItBvBHU7zAM/mkhCZjtBEIJexhOMzZbgFlPLuErlJF2b+0g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <script src="../app.js" defer></script>
 
@@ -48,11 +49,121 @@
     </header>
 
     <main>
-        <section class="mb-2 mx-4 d-grid text-center">
-            <form class="mt-4 d-grid search-form">
-                <input class="me-1" id="search-archives-input" type="text" placeholder="Search the archives..." title="Search archives input" aria-placeholder="Search the archives..." aria-/>
-                <input class="btn btn-danger ml-1" id="clear-search-input" type="reset" value="Clear" />
-            </form>
+        <section class="mb-2 mx-4 d-grid text-center position-relative chart-container">
+            <ul class="nav nav-tabs mt-2 border-bottom-0 justify-content-end chart-tabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="top5-chart1-tab" data-bs-toggle="tab" data-bs-target="#top5-chart1" type="button" role="tab" aria-controls="top5-chart1" aria-selected="true" aria-hidden="false">Top 5 Most Expensive Items</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="top5-chart2-tab" data-bs-toggle="tab" data-bs-target="#top5-chart2" type="button" role="tab" aria-controls="top5-chart2" aria-selected="false" aria-hidden="true">Top 5 Brands</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="top5-chart3-tab" data-bs-toggle="tab" data-bs-target="#top5-chart3" type="button" role="tab" aria-controls="top5-chart3" aria-selected="false" aria-hidden="true">Top 5 Months</button>
+                </li>
+            </ul>
+
+            <nav class="tab-content">
+                <div class="tab-pane active" id="top5-chart1" role="tabpanel" aria-labelledby="top5-chart1-tab">
+                    <canvas class="w-100" id="top5-highest-prices-chart" aria-label="Top 5 archive items with highest prices" role="img"></canvas>
+                </div>
+                <div class="tab-pane" id="top5-chart2" role="tabpanel" aria-labelledby="top5-chart2-tab">
+                    <canvas class="w-100" id="top5-most-items-sold-brands-chart" aria-label="Top 5 archive items with most items sold by brand" role="img"></canvas>
+                </div>
+                <div class="tab-pane" id="top5-chart3" role="tabpanel" aria-labelledby="top5-chart3-tab">
+                    <canvas class="w-100" id="top5-most-items-sold-months-chart" aria-label="Top 5 archive items with most items sold by month" role="img"></canvas>
+                </div>
+            </nav>
+        </section>
+
+        <section class="my-2 mx-4 d-grid">
+            <div class="my-4 accordion" id="accordion-form-container">
+                <!-- SIMPLE FILTERING -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="accordion-header-simple">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-simple-form" aria-expanded="true" aria-controls="collapse-simple-form">Simple Filtering</button>
+                    </h2>
+
+                    <div id="collapse-simple-form" class="accordion-collapse collapse show" aria-labelledby="accordion-header-simple" data-bs-parent="#accordion-form-container">
+                        <div class="accordion-body">
+                            <form class="my-2 d-grid simple-form">
+                                <input class="me-0 me-md-1" id="search-archives-input" type="text" placeholder="Search the archives..." title="Search archives input" aria-placeholder="Search the archives..." />
+                                <input class="btn btn-danger ml-1 mt-2 mt-md-0" id="clear-search-input" type="reset" value="Clear" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ADVANCED FILTERING -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="accordion-header-advanced">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-advanced-form" aria-expanded="false" aria-controls="collapse-advanced-form">Advanced Filtering</button>
+                    </h2>
+
+                    <div id="collapse-advanced-form" class="accordion-collapse collapse" aria-labelledby="accordion-header-advanced" data-bs-parent="#accordion-form-container">
+                        <div class="accordion-body">
+                            <form class="my-2 advanced-form">
+                                <div class="row">
+                                    <div class="col-12 col-sm-4 col-lg-1 mt-2 mt-lg-0 d-flex align-items-center">
+                                        <label for="archive-months-choice">Month:</label>
+                                    </div>
+                                    <div class="col-12 col-sm-8 col-lg-3 mt-2 mt-lg-0">
+                                        <!-- PRE-POPULATED -->
+                                        <select id="archive-months-choice">
+                                            <option value="">SHOW ALL</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-12 col-sm-4 col-lg-1 mt-2 mt-lg-0 d-flex align-items-center">
+                                        <label for="archive-years-choice">Year:</label>
+                                    </div>
+                                    <div class="col-12 col-sm-8 col-lg-3 mt-2 mt-lg-0">
+                                        <!-- PRE-POPULATED -->
+                                        <select id="archive-years-choice">
+                                            <option value="">SHOW ALL</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-12 col-sm-4 col-lg-1 mt-2 mt-lg-0 d-flex align-items-center">
+                                        <label for="archive-brands-choice">Brand:</label>
+                                    </div>
+                                    <div class="col-12 col-sm-8 col-lg-3 mt-2 mt-lg-0">
+                                        <input list="archive-brands" id="archive-brands-choice" name="archive-brands-choice" placeholder="Select brand" />
+                                        <!-- PRE-POPULATED -->
+                                        <datalist id="archive-brands">
+                                            <option value="SHOW ALL"></option>
+                                        </datalist>
+                                    </div>
+
+                                    <div class="col-12 col-sm-4 col-lg-2 mt-2 d-flex align-items-center">
+                                        <label for="archive-notes-choice">With notes?</label>
+                                    </div>
+                                    <div class="col-12 col-sm-8 col-lg-2 mt-2 d-flex align-items-center">
+                                        <input type="checkbox" id="archive-notes-choice" />
+                                    </div>
+
+                                    <div class="col-12 col-sm-4 col-lg-2 mt-2 d-flex align-items-center">
+                                        <label for="archive-is-sort-alpha-choice">Sort alphabetically?</label>
+                                    </div>
+                                    <div class="col-12 col-sm-8 col-lg-2 mt-2 d-flex align-items-center">
+                                        <input type="checkbox" id="archive-is-sort-alpha-choice" />
+                                    </div>
+
+                                    <div class="col-12 mt-2">
+                                        <div class="row">
+                                            <div class="col-12 col-sm-6 text-left text-sm-end">
+                                                <input type="submit" class="btn btn-success" id="filter-result" value="Filter Result" />
+                                            </div>
+                                            <div class="col-12 col-sm-6">
+                                                <input type="reset" class="btn btn-danger ml-1 mt-2 mt-sm-0" id="clear-filter-input" value="Clear" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="my-2 mx-4 d-grid text-center">
