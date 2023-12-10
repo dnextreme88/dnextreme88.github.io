@@ -422,7 +422,7 @@ const items = [
         name: 'Adidas Predito Shoes',
         price: 400,
         condition: 'used',
-        size: '12 inches',
+        size: '12 US',
         dateSold: '2017-12-02',
         imageLocation: '2017/adidas3-1.jpg'
     },
@@ -483,7 +483,7 @@ const items = [
         imageLocation: '2018/rmc1-1.jpg'
     },
     {
-        name: 'Corsair 2GB DDR2 RAM',
+        name: 'Corsair CMX512 2GB DDR2 RAM',
         price: 250,
         condition: 'used',
         size: 'N/A',
@@ -748,7 +748,7 @@ const items = [
         imageLocation: '2019/jag1-1.jpg'
     },
     {
-        name: 'Intex Mid-Gaming CPU',
+        name: 'Intex Supernova Mid-Gaming CPU',
         price: 2300,
         condition: 'used',
         size: 'N/A',
@@ -798,7 +798,7 @@ const items = [
         imageLocation: '2020/human-genes1-1.jpg'
     },
     {
-        name: 'Altec Lansing Speakers',
+        name: 'Altec Lansing 120i Speakers',
         price: 200,
         condition: 'used',
         size: 'N/A',
@@ -1159,7 +1159,7 @@ const items = [
         imageLocation: '2022/ecko11-1.jpg'
     },
     {
-        name: 'Bauhn Noise Cancellation Headset',
+        name: 'Bauhn Auricle Noise Cancellation Headset',
         price: 200,
         condition: 'used',
         size: 'N/A',
@@ -1815,6 +1815,24 @@ const items = [
         size: 'N/A',
         dateSold: '2023-10-23',
         imageLocation: '2023/hat1-1.jpg'
+    },
+    {
+        name: 'Vans Old School Bearcat Shoes',
+        price: 500,
+        condition: 'used',
+        size: '11 US',
+        notes: 'Shipped via LBC. Cash-on-pickup. Received payment on 11/20.',
+        dateSold: '2023-11-17',
+        imageLocation: '2023/vans1-1.jpg',
+    },
+    {
+        name: 'Colorado Craig DGrey Boots',
+        price: 500,
+        condition: 'new',
+        size: '9 US',
+        notes: 'Shipped via J&T. Cash-on-delivery. Received payment on 12/10.',
+        dateSold: '2023-11-19',
+        imageLocation: '2023/colorado1-1.jpg',
     }
 ];
 
@@ -1846,6 +1864,7 @@ const brands = [
     'Carhartt',
     'Champion',
     'College Algebra',
+    'Colorado',
     'Converse',
     'Corsair',
     'Crooks and Castles',
@@ -1953,6 +1972,7 @@ const brands = [
     'Under Armour',
     'Uniqlo',
     'Universal Studios',
+    'Vans',
     'Weatherproof',
     'Wrangler',
     'WWE',
