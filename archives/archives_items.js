@@ -1312,13 +1312,13 @@ const items = [
         imageLocation: '2022/american-apparel1-1.jpg'
     },
     {
-        name: 'T-Force 8GB DDR4 RAM',
+        name: 'TEAMGROUP T-Force 8GB DDR4 RAM',
         price: 1700,
         condition: 'used',
         size: 'N/A',
         notes: 'P500 initially paid through GCash on 1/26. Received P1,200 on meetup.',
         dateSold: '2023-01-28',
-        imageLocation: '2023/t-force1-1.jpg'
+        imageLocation: '2023/teamgroup1-1.jpg'
     },
     {
         name: 'Lynx Jacket',
@@ -1823,7 +1823,7 @@ const items = [
         size: '11 US',
         notes: 'Shipped via LBC. Cash-on-pickup. Received payment on 11/20.',
         dateSold: '2023-11-17',
-        imageLocation: '2023/vans1-1.jpg',
+        imageLocation: '2023/vans1-1.jpg'
     },
     {
         name: 'Colorado Craig DGrey Boots',
@@ -1832,7 +1832,7 @@ const items = [
         size: '9 US',
         notes: 'Shipped via J&T. Cash-on-delivery. Received payment on 12/10.',
         dateSold: '2023-11-19',
-        imageLocation: '2023/colorado1-1.jpg',
+        imageLocation: '2023/colorado1-1.jpg'
     }
 ];
 
@@ -1962,8 +1962,9 @@ const brands = [
     'Stanfield\'s',
     'SteelSeries',
     'Superdry',
-    'Tapout',
     'T Bar',
+    'Tapout',
+    'TEAMGROUP',
     'Tender Juicy',
     'The North Face',
     'Tribal',
