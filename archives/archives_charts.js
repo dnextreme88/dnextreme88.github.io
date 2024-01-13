@@ -17,18 +17,26 @@ var chartOptions = {
         scales: {
             y: { beginAtZero: true }
         },
-    },
-    scales: {
-        x: {
-            ticks: { color: 'black' },
-            grid: { display: false }
-        },
-        y: {
-            ticks: { color: 'black' },
-            grid: { display: false }
-        }
     }
 };
+
+const chartType = window.innerWidth <= 575 ? 'doughnut' : 'bar';
+
+if (chartType == 'bar') {
+    chartOptions = {
+        ...chartOptions,
+        scales: {
+            x: {
+                ticks: { color: 'black' },
+                grid: { display: false }
+            },
+            y: {
+                ticks: { color: 'black' },
+                grid: { display: false }
+            }
+        }
+    }
+}
 
 /**
  * Display chart for top 5 archive items with the highest prices, also sorted alphabetically
@@ -41,7 +49,7 @@ function getTop5HighestPricesChart(archiveItems) {
 
     const ctx = document.getElementById('top5-highest-prices-chart');
     new Chart(ctx, {
-        type: 'bar',
+        type: chartType,
         data: {
             labels: sortedItems.map(item => item.name),
             datasets: [{
@@ -74,7 +82,7 @@ function getTop5BrandsChart(archiveItems) {
 
     const ctx = document.getElementById('top5-most-items-sold-brands-chart');
     new Chart(ctx, {
-        type: 'bar',
+        type: chartType,
         data: {
             labels: sortedItems.map(item => item.brand),
             datasets: [{
@@ -110,7 +118,7 @@ function getTop5MonthsChart(archiveItems) {
 
     const ctx = document.getElementById('top5-most-items-sold-months-chart');
     new Chart(ctx, {
-        type: 'bar',
+        type: chartType,
         data: {
             labels: sortedItems.map(item => item.month),
             datasets: [{
