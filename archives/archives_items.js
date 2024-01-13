@@ -1191,7 +1191,7 @@ const items = [
         condition: 'used',
         size: 'N/A',
         dateSold: '2022-07-10',
-        imageLocation: '2022/ipad1-1.jpg'
+        imageLocation: '2022/apple1-1.jpg'
     },
     {
         name: 'Samsung Galaxy Tab 3 Lite Tablet',
