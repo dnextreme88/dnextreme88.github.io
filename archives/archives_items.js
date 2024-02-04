@@ -1932,6 +1932,14 @@ const items = [
         dateSold: '2024-02-01',
         imageLocation: '2024/jedel1-1.jpg',
     },
+    {
+        name: 'Casio fx-991MS Scientific Calculator',
+        price: 200,
+        condition: 'used',
+        size: 'N/A',
+        dateSold: '2024-02-04',
+        imageLocation: '2024/casio1-1.jpg',
+    },
 ];
 
 const brands = [
@@ -1960,6 +1968,7 @@ const brands = [
     'Calvin Klein',
     'Cape Juby',
     'Carhartt',
+    'Casio',
     'Champion',
     'College Algebra',
     'Colorado',
