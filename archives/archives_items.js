@@ -1191,7 +1191,7 @@ const items = [
         condition: 'used',
         size: 'N/A',
         dateSold: '2022-07-10',
-        imageLocation: '2022/ipad1-1.jpg'
+        imageLocation: '2022/apple1-1.jpg'
     },
     {
         name: 'Samsung Galaxy Tab 3 Lite Tablet',
@@ -1663,7 +1663,7 @@ const items = [
         imageLocation: '2023/mantaray1-1.jpg'
     },
     {
-        name: 'HTC Sensation Z710A Phonhe',
+        name: 'HTC Sensation Z710A Phone',
         price: 500,
         condition: 'used',
         size: 'N/A',
@@ -1833,7 +1833,113 @@ const items = [
         notes: 'Shipped via J&T. Cash-on-delivery. Received payment on 12/10.',
         dateSold: '2023-11-19',
         imageLocation: '2023/colorado1-1.jpg'
-    }
+    },
+    {
+        name: 'Puma Ignite Dual Camo Shoes',
+        price: 500,
+        condition: 'used',
+        size: '10.5 US',
+        notes: 'Buyer picked up on 1/3. Payment picked up on on 1/8.',
+        dateSold: '2023-12-03',
+        imageLocation: '2023/puma1-1.jpg'
+    },
+    {
+        name: 'Palit GeForce GT 240 Video Card',
+        price: 200,
+        condition: 'used',
+        size: 'N/A',
+        dateSold: '2023-12-13',
+        imageLocation: '2023/video-card2-1.jpg'
+    },
+    {
+        name: 'Razer Deathstalker Keyboard',
+        price: 800,
+        condition: 'used',
+        size: 'N/A',
+        dateSold: '2023-12-16',
+        imageLocation: '2023/razer1-1.jpg'
+    },
+    {
+        name: 'Nike Cap',
+        price: 200,
+        condition: 'new',
+        size: 'N/A',
+        dateSold: '2023-12-30',
+        imageLocation: '2023/nike7-1.jpg'
+    },
+    {
+        name: 'Sony Playstation 5 Green Camo Controller',
+        price: 2500,
+        condition: 'new',
+        size: 'N/A',
+        dateSold: '2024-01-01',
+        imageLocation: '2024/sony2-1.jpg'
+    },
+    {
+        name: 'Nokia 6288 Phone',
+        price: 500,
+        condition: 'used',
+        size: 'N/A',
+        notes: 'Shipped via J&T. Payment sent through GCash on 12/31. Received payment on 1/4.',
+        dateSold: '2024-01-03',
+        imageLocation: '2024/nokia1-1.jpg'
+    },
+    {
+        name: 'Apple iPhone 4 Phone',
+        price: 100,
+        condition: 'used',
+        size: 'N/A',
+        dateSold: '2024-01-05',
+        imageLocation: '2024/apple2-1.jpg'
+    },
+    {
+        name: 'Apple iPhone 4S Phone',
+        price: 250,
+        condition: 'used',
+        size: 'N/A',
+        dateSold: '2024-01-13',
+        imageLocation: '2024/apple3-1.jpg'
+    },
+    {
+        name: 'Apple iPhone 5 Phone',
+        price: 100,
+        condition: 'used',
+        size: 'N/A',
+        dateSold: '2024-01-14',
+        imageLocation: '2024/apple4-1.jpg'
+    },
+    {
+        name: 'Nokia 1650 Phone',
+        price: 100,
+        condition: 'used',
+        size: 'N/A',
+        dateSold: '2024-01-22',
+        imageLocation: '2024/nokia2-1.jpg',
+    },
+    {
+        name: 'Telstra Lite ZTE F327S Phone',
+        price: 250,
+        condition: 'used',
+        size: 'N/A',
+        dateSold: '2024-01-29',
+        imageLocation: '2024/telstra1-1.jpg',
+    },
+    {
+        name: 'Jedel S-506 Speakers',
+        price: 250,
+        condition: 'new',
+        size: 'N/A',
+        dateSold: '2024-02-01',
+        imageLocation: '2024/jedel1-1.jpg',
+    },
+    {
+        name: 'Casio fx-991MS Scientific Calculator',
+        price: 200,
+        condition: 'used',
+        size: 'N/A',
+        dateSold: '2024-02-04',
+        imageLocation: '2024/casio1-1.jpg',
+    },
 ];
 
 const brands = [
@@ -1862,6 +1968,7 @@ const brands = [
     'Calvin Klein',
     'Cape Juby',
     'Carhartt',
+    'Casio',
     'Champion',
     'College Algebra',
     'Colorado',
@@ -1901,6 +2008,7 @@ const brands = [
     'Intex',
     'IZOD',
     'Jag',
+    'Jedel',
     'Jerzees',
     'K-Zone',
     'Lacoste',
@@ -1924,11 +2032,13 @@ const brands = [
     'Nike',
     'Nintendo',
     'No Fear',
+    'Nokia',
     'NYC',
     'O\'Neill',
     'Old Navy',
     'Omega Houseware',
     'Oreo',
+    'Palit',
     'Panasonic',
     'Pelle Pelle',
     'Penshoppe',
@@ -1942,8 +2052,10 @@ const brands = [
     'Pour Homme',
     'PUBG',
     'Pujiqing',
+    'Puma',
     'Quiksilver',
     'Ralph Lauren',
+    'Razer',
     'Reebok',
     'Resident Evil',
     'RMC',
@@ -1965,6 +2077,7 @@ const brands = [
     'T Bar',
     'Tapout',
     'TEAMGROUP',
+    'Telstra',
     'Tender Juicy',
     'The North Face',
     'Tribal',
