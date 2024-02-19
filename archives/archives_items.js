@@ -1949,6 +1949,14 @@ const items = [
         dateSold: '2024-02-18',
         imageLocation: '2024/customized1-1.jpg',
     },
+    {
+        name: 'Lileng-301 Dancing Water Speakers',
+        price: 200,
+        condition: 'used',
+        size: 'N/A',
+        dateSold: '2024-02-19',
+        imageLocation: '2024/lileng1-1.jpg',
+    },
 ];
 
 const brands = [
@@ -2027,6 +2035,7 @@ const brands = [
     'Lee',
     'Levi\'s',
     'LG',
+    'Lileng-301',
     'Looney Tunes',
     'LP Support',
     'Lynx',
