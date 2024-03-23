@@ -1957,6 +1957,14 @@ const items = [
         dateSold: '2024-02-19',
         imageLocation: '2024/lileng1-1.jpg',
     },
+    {
+        name: 'AMD AM4 Stock Cooler Fan',
+        price: 200,
+        condition: 'new',
+        size: 'N/A',
+        dateSold: '2024-03-16',
+        imageLocation: '2024/amd1-1.jpg',
+    },
 ];
 
 const brands = [
@@ -1967,6 +1975,7 @@ const brands = [
     'Alpha',
     'Alstyle',
     'Altec Lansing',
+    'AMD',
     'American Apparel',
     'American Eagle Outfitters',
     'Anvil',
