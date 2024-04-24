@@ -1965,6 +1965,15 @@ const items = [
         dateSold: '2024-03-16',
         imageLocation: '2024/amd1-1.jpg',
     },
+    {
+        name: 'Oreo Photocards',
+        price: 250,
+        condition: 'new',
+        size: 'N/A',
+        notes: 'Shipped via J&T. Payment sent through GCash on 4/18. Received payment on 4/19.',
+        dateSold: '2024-04-19',
+        imageLocation: '2024/oreo2-1.jpg',
+    },
 ];
 
 const brands = [
