@@ -2038,6 +2038,14 @@ const items = [
         dateSold: '2024-06-07',
         imageLocation: '2024/zara1-1.jpg',
     },
+    {
+        name: 'NZXT F120 Non-RGB Stock Fan',
+        price: 250,
+        condition: 'new',
+        size: 'N/A',
+        dateSold: '2024-06-10',
+        imageLocation: '2024/nzxt1-1.jpg',
+    },
 ];
 
 const brands = [
@@ -2137,6 +2145,7 @@ const brands = [
     'No Fear',
     'Nokia',
     'NYC',
+    'NZXT',
     'O\'Neill',
     'Old Navy',
     'Omega Houseware',
