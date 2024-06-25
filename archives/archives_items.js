@@ -2046,6 +2046,14 @@ const items = [
         dateSold: '2024-06-10',
         imageLocation: '2024/nzxt1-1.jpg',
     },
+    {
+        name: 'Resong RJ45 Ethernet cable',
+        price: 200,
+        condition: 'new',
+        size: 'N/A',
+        dateSold: '2024-06-22',
+        imageLocation: '2024/resong1-1.jpg',
+    },
 ];
 
 const brands = [
@@ -2171,6 +2179,7 @@ const brands = [
     'Razer',
     'Reebok',
     'Resident Evil',
+    'Resong',
     'RMC',
     'Robert Barakett',
     'ROMOSS',
