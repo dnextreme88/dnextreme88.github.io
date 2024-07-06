@@ -2003,6 +2003,7 @@ const items = [
         price: 250,
         condition: 'new',
         size: 'N/A',
+        notes: 'Buyer picked up on 5/6. Payment picked up on on 5/8.',
         dateSold: '2024-05-05',
         imageLocation: '2024/caterpillar1-1.jpg',
     },
