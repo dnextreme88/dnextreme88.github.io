@@ -2003,6 +2003,7 @@ const items = [
         price: 250,
         condition: 'new',
         size: 'N/A',
+        notes: 'Buyer picked up on 5/6. Payment picked up on on 5/8.',
         dateSold: '2024-05-05',
         imageLocation: '2024/caterpillar1-1.jpg',
     },
@@ -2053,6 +2054,30 @@ const items = [
         size: 'N/A',
         dateSold: '2024-06-22',
         imageLocation: '2024/resong1-1.jpg',
+    },
+    {
+        name: 'Under Armour Shirt',
+        price: 200,
+        condition: 'new',
+        size: 'XL',
+        dateSold: '2024-07-08',
+        imageLocation: '2024/under-armour2-1.jpg',
+    },
+    {
+        name: 'Under Armour Shirt',
+        price: 200,
+        condition: 'new',
+        size: 'XL',
+        dateSold: '2024-07-09',
+        imageLocation: '2024/under-armour3-1.jpg',
+    },
+    {
+        name: 'Under Armour Shirt',
+        price: 300,
+        condition: 'new',
+        size: 'L',
+        dateSold: '2024-07-12',
+        imageLocation: '2024/under-armour4-1.jpg',
     },
 ];
 
