@@ -59,7 +59,37 @@ $(document).ready(function () {
         archiveBrands.innerHTML += `<option value="${brand}"></option>`;
     });
 
-    // Charts
+    // Populate tags
+    const tagsList = [];
+
+    items.forEach(obj => {
+        if (obj.tags) {
+            const splittedTags = obj.tags.split(',');
+
+            splittedTags.forEach(tag => {
+                if (!tagsList.includes(tag)) {
+                    tagsList.push(tag);
+                }
+            });
+        }
+    });
+
+    tagsList.sort(function(a, b) { // Sort alphabetically
+        return a === b ? 0 : a < b ? - 1 : 1;
+    });
+
+    const tagsListElement = document.getElementsByClassName('tags-list')[0];
+    tagsList.forEach(tag => tagsListElement.innerHTML += `<li class="item-tags" data-tag-name="${tag}">${tag}</li>`);
+
+    const tags = Object.values(document.getElementsByClassName('item-tags'));
+    tags.forEach(tag => {
+        tag.addEventListener('click', e => {
+            e.preventDefault();
+
+            tag.classList.toggle('active');
+        });
+    });
+
     getTop5HighestPricesChart(allItems);
     getTop5BrandsChart(allItems);
     getTop5MonthsChart(allItems);
@@ -128,6 +158,8 @@ function searchAndFilter(type) {
         const brandChoice = document.getElementById('archive-brands-choice').value.toLowerCase();
         const notesChoice = document.getElementById('archive-notes-choice').checked;
         const isSortAlphaChoice = document.getElementById('archive-is-sort-alpha-choice').checked;
+        const activeTagsSelection = Object.values(document.getElementsByClassName('item-tags active'));
+        const activeTags = [];
 
         filteredItems = allItems.filter(obj => {
             return (
@@ -141,6 +173,26 @@ function searchAndFilter(type) {
                 (notesChoice && obj.hasOwnProperty('notes')) || !notesChoice
             );
         });
+
+        activeTagsSelection.forEach(tag => activeTags.push(tag.getAttribute('data-tag-name')));
+
+        if (activeTags.length > 0) { // If at least one tag is selected (denoted with a different background)
+            const filteredItemsWithTags = [];
+
+            activeTags.forEach(tag => {
+                const itemsWithActiveTags = filteredItems.filter(obj => {
+                    const tagsAsArray = obj.tags.split(',');
+
+                    return tagsAsArray.includes(tag);
+                });
+
+                if (itemsWithActiveTags.length > 0) {
+                    itemsWithActiveTags.forEach(obj => filteredItemsWithTags.push(obj));
+                }
+            });
+
+            filteredItems = filteredItemsWithTags;
+        }
 
         if (isSortAlphaChoice) {
             filteredItems.sort(function(a, b) {
@@ -171,6 +223,9 @@ function resetData() {
 
     isFiltering = false;
     filteredItems = [];
+
+    const tags = Object.values(document.getElementsByClassName('item-tags'));
+    tags.forEach(tag => tag.classList.remove('active'));
 
     const alert = document.getElementsByClassName('no-results-found')[0];
     const alertHasResults = document.getElementsByClassName('has-results-found')[0];
@@ -224,6 +279,10 @@ function generateMarkup(items) {
                     <tr>
                         <td>Sold on</td>
                         <td>${items[index]['dateSold']}</td>
+                    </tr>
+                    <tr>
+                        <td>Tags</td>
+                        <td>${items[index]['tags']}</td>
                     </tr>
                 </table>
             </figure>
