@@ -186,6 +186,13 @@ main {
                         border-bottom-color: #AAA;
                     }
                 }
+
+                & .individual-tags {
+                    max-width: 240px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
             }
         }
     }

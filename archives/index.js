@@ -337,7 +337,7 @@ function generateMarkup(items) {
                 </div>
 
                 <table class="table table-striped">
-                    <tr class="price">
+                    <tr>
                         <td>Price</td>
                         <td>&#8369; ${Number(items[index]['price']).toLocaleString()}</td>
                     </tr>
@@ -355,7 +355,7 @@ function generateMarkup(items) {
                     </tr>
                     <tr>
                         <td>Tags</td>
-                        <td>${items[index]['tags']}</td>
+                        <td class="individual-tags">${items[index]['tags']}</td>
                     </tr>
                 </table>
             </figure>
