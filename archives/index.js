@@ -50,7 +50,9 @@ $(document).ready(function () {
     });
 
     const archiveYears = document.getElementById('archive-years-choice');
+    const years = [];
     for (let i = 2014; i <= currentYear; i++) {
+        years.push(i);
         archiveYears.innerHTML += `<option value="${i}">${i}</option>`;
     }
 
@@ -93,6 +95,77 @@ $(document).ready(function () {
     getTop5HighestPricesChart(allItems);
     getTop5BrandsChart(allItems);
     getTop5MonthsChart(allItems);
+
+    // General statistics
+    const statisticsMonths = [];
+    months.forEach((month, index) => {
+        var monthIndex = index + 1;
+        monthIndex = `-${monthIndex < 10 ? '0' + monthIndex : monthIndex}-`;
+
+        const filterByMonth = allItems.filter(item => item['dateSold'].indexOf(monthIndex) != -1);
+        if (filterByMonth.length > 0) {
+            const sum = filterByMonth.reduce((accumulator, currentValue) => accumulator + currentValue.price, 0);
+
+            statisticsMonths.push({ month: month, count: filterByMonth.length, sum: sum });
+        }
+    });
+
+    const monthMostItems = statisticsMonths.reduce((itemA, itemB) => (itemA.count > itemB.count) ? itemA : itemB);
+    const monthLeastItems = statisticsMonths.reduce((itemA, itemB) => (itemA.count < itemB.count) ? itemA : itemB);
+    const monthMostRevenue = statisticsMonths.reduce((itemA, itemB) => (itemA.sum > itemB.sum) ? itemA : itemB);
+    const monthLeastRevenue = statisticsMonths.reduce((itemA, itemB) => (itemA.sum < itemB.sum) ? itemA : itemB);
+
+    // years
+    const statisticsYears = [];
+    var mostRevenueMadeInAMonthPerYear;
+    var leastRevenueMadeInAMonthPerYear;
+    years.forEach((year) => {
+        const filterByYear = allItems.filter(item => item['dateSold'].indexOf(year) != -1);
+        if (filterByYear.length > 0) {
+            const sum = filterByYear.reduce((accumulator, currentValue) => accumulator + currentValue.price, 0);
+
+            const monthsSum = [];
+            months.forEach((month, index) => {
+                var monthIndex = index + 1;
+                monthIndex = `${year}-${monthIndex < 10 ? '0' + monthIndex : monthIndex}-`;
+
+                const filterByMonth = allItems.filter(item => item['dateSold'].indexOf(monthIndex) != -1);
+                if (filterByMonth.length > 0) {
+                    const sum = filterByMonth.reduce((accumulator, currentValue) => accumulator + currentValue.price, 0);
+                    const objToPush = {month: month, count: filterByMonth.length, sum: sum};
+                    monthsSum.push(objToPush);
+
+                    objToPush.year = year;
+
+                    mostRevenueMadeInAMonthPerYear = !mostRevenueMadeInAMonthPerYear || (objToPush.sum > mostRevenueMadeInAMonthPerYear.sum)
+                        ? objToPush : mostRevenueMadeInAMonthPerYear;
+                    leastRevenueMadeInAMonthPerYear = !leastRevenueMadeInAMonthPerYear || (objToPush.sum < leastRevenueMadeInAMonthPerYear.sum)
+                        ? objToPush : leastRevenueMadeInAMonthPerYear;
+                }
+            });
+
+            statisticsYears.push({ year: year, count: filterByYear.length, sum: sum, months: monthsSum });
+        }
+    });
+
+    const yearMostItems = statisticsYears.reduce((itemA, itemB) => (itemA.count > itemB.count) ? itemA : itemB);
+    const yearLeastItems = statisticsYears.reduce((itemA, itemB) => (itemA.count < itemB.count) ? itemA : itemB);
+    const yearMostRevenue = statisticsYears.reduce((itemA, itemB) => (itemA.sum > itemB.sum) ? itemA : itemB);
+    const yearLeastRevenue = statisticsYears.reduce((itemA, itemB) => (itemA.sum < itemB.sum) ? itemA : itemB);
+
+    const generalStatisticsElement = document.getElementsByClassName('general-statistics-list')[0];
+    generalStatisticsElement.innerHTML += `
+        <li>Most items sold in a month (all-time): ${monthMostItems.count} (${monthMostItems.month})</li>
+        <li>Least items sold in a month (all-time): ${monthLeastItems.count} (${monthLeastItems.month})</li>
+        <li>Most revenue made in a month (all-time): &#8369; ${Number(monthMostRevenue.sum).toLocaleString()} (${monthMostRevenue.month})</li>
+        <li>Least revenue made in a month (all-time): &#8369; ${Number(monthLeastRevenue.sum).toLocaleString()} (${monthLeastRevenue.month})</li>
+        <li>Most items sold in a year: ${yearMostItems.count} (${yearMostItems.year})</li>
+        <li>Least items sold in a year: ${yearLeastItems.count} (${yearLeastItems.year})</li>
+        <li>Most revenue made in a year: &#8369; ${Number(yearMostRevenue.sum).toLocaleString()} (${yearMostRevenue.year})</li>
+        <li>Least revenue made in a year: &#8369; ${Number(yearLeastRevenue.sum).toLocaleString()} (${yearLeastRevenue.year})</li>
+        <li>Most revenue made in a month on a given year: ${mostRevenueMadeInAMonthPerYear.count} items for &#8369; ${Number(mostRevenueMadeInAMonthPerYear.sum).toLocaleString()} (${mostRevenueMadeInAMonthPerYear.month} ${mostRevenueMadeInAMonthPerYear.year})</li>
+        <li>Least revenue made in a month on a given year: ${leastRevenueMadeInAMonthPerYear.count} items for &#8369; ${Number(leastRevenueMadeInAMonthPerYear.sum).toLocaleString()} (${leastRevenueMadeInAMonthPerYear.month} ${leastRevenueMadeInAMonthPerYear.year})</li>
+    `;
 
     console.log('Archives script initialized.');
 });
