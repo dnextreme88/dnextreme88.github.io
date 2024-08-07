@@ -2328,6 +2328,34 @@ const items = [
         tags: 'australia',
         imageLocation: '2024/under-armour4-1.jpg',
     },
+    {
+        name: 'Cadbury Mug',
+        price: 150,
+        condition: 'used',
+        size: 'N/A',
+        notes: 'Sold to Abee. Payment sent through GCash on 7/27. Received payment on 8/7.',
+        dateSold: '2024-07-27',
+        tags: 'australia,sold to friend',
+        imageLocation: '2024/cadbury1-1.jpg',
+    },
+    {
+        name: 'Quiksilver Shirt',
+        price: 150,
+        condition: 'new',
+        size: 'M',
+        dateSold: '2024-08-06',
+        tags: 'australia',
+        imageLocation: '2024/quiksilver4-1.jpg',
+    },
+    {
+        name: 'Uniqlo Shirt',
+        price: 150,
+        condition: 'new',
+        size: 'M',
+        dateSold: '2024-08-06',
+        tags: 'received as gift',
+        imageLocation: '2024/uniqlo4-1.jpg',
+    },
 ];
 
 const brands = [
@@ -2353,6 +2381,7 @@ const brands = [
     'Bronson',
     'Burberry',
     'Burmese',
+    'Cadbury',
     'Call of Duty',
     'Calvin Klein',
     'Cape Juby',
