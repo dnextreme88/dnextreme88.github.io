@@ -86,7 +86,7 @@ const items = [
         condition: 'used',
         size: 'N/A',
         dateSold: '2015-07-01',
-        tags: 'sold with original box',
+        tags: 'accessories,sold with original box',
         imageLocation: '2015/panasonic1-1.jpg'
     },
     {
@@ -303,7 +303,7 @@ const items = [
         condition: 'new',
         size: 'N/A',
         dateSold: '2017-01-03',
-        tags: 'freebies,sold with original box',
+        tags: 'freebies',
         imageLocation: '2017/keychain1-1.jpg'
     },
     {
@@ -1040,7 +1040,7 @@ const items = [
         imageLocation: '2020/marks-and-spencer2-1.jpg'
     },
     {
-        name: 'Adidas Shirt',
+        name: 'Adidas V-Neck',
         price: 200,
         condition: 'new',
         size: 'XXL',
@@ -1550,7 +1550,7 @@ const items = [
         imageLocation: '2023/tapout3-1.jpg'
     },
     {
-        name: 'American Eagle Outfitters Shirt',
+        name: 'American Eagle Outfitters Polo',
         price: 150,
         condition: 'new',
         size: 'XL',
@@ -1668,7 +1668,7 @@ const items = [
         imageLocation: '2023/tasman-ugg1-1.jpg'
     },
     {
-        name: 'Bronson Shirt',
+        name: 'Bronson Polo',
         price: 300,
         condition: 'new',
         size: 'XL',
@@ -1853,7 +1853,7 @@ const items = [
         imageLocation: '2023/crooks-and-castles5-1.jpg'
     },
     {
-        name: 'Mantaray Shirt',
+        name: 'Mantaray Sweatshirt',
         price: 100,
         condition: 'used',
         size: 'L',
@@ -1992,7 +1992,7 @@ const items = [
         size: 'N/A',
         notes: 'Sold to Marie. P500 initially paid through GCash on 9/18 and P1,000 on 9/24. Received payment on 9/28.',
         dateSold: '2023-09-17',
-        tags: 'sold to friend',
+        tags: 'australia,sold to friend',
         imageLocation: '2023/microsoft1-1.jpg'
     },
     {
@@ -2335,7 +2335,7 @@ const items = [
         size: 'N/A',
         notes: 'Sold to Abee. Payment sent through GCash on 7/27. Received payment on 8/7.',
         dateSold: '2024-07-27',
-        tags: 'australia,sold to friend',
+        tags: 'australia,freebies,sold to friend,sold with original box',
         imageLocation: '2024/cadbury1-1.jpg',
     },
     {
@@ -2348,7 +2348,7 @@ const items = [
         imageLocation: '2024/quiksilver4-1.jpg',
     },
     {
-        name: 'Uniqlo Shirt',
+        name: 'Uniqlo V-Neck',
         price: 150,
         condition: 'new',
         size: 'M',
