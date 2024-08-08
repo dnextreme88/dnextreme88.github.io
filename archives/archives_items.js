@@ -2356,6 +2356,15 @@ const items = [
         tags: 'received as gift',
         imageLocation: '2024/uniqlo4-1.jpg',
     },
+    {
+        name: 'AquaFlask 32oz Bottle',
+        price: 250,
+        condition: 'new',
+        size: 'N/A',
+        dateSold: '2024-08-08',
+        tags: 'bought from friend',
+        imageLocation: '2024/aquaflask1-1.jpg',
+    },
 ];
 
 const brands = [
@@ -2371,6 +2380,7 @@ const brands = [
     'American Eagle Outfitters',
     'Anvil',
     'Apple',
+    'AquaFlask',
     'ASUS',
     'Auscam',
     'Bauhn',
