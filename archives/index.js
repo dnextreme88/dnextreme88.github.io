@@ -355,7 +355,7 @@ function generateMarkup(items) {
                     </tr>
                     <tr>
                         <td>Tags</td>
-                        <td class="individual-tags">${items[index]['tags']}</td>
+                        <td class="individual-tags" title="${items[index]['tags']}">${items[index]['tags']}</td>
                     </tr>
                 </table>
             </figure>
