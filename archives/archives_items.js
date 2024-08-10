@@ -2365,6 +2365,15 @@ const items = [
         tags: 'bought from friend',
         imageLocation: '2024/aquaflask1-1.jpg',
     },
+    {
+        name: 'Adidas Fluidflow 2.0 Shoes',
+        price: 200,
+        condition: 'used',
+        size: '12 US',
+        dateSold: '2024-08-10',
+        tags: 'australia',
+        imageLocation: '2024/adidas10-1.jpg'
+    },
 ];
 
 const brands = [
