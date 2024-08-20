@@ -61,6 +61,30 @@ main {
                 min-width: 220px;
                 padding: 0.25em 0.5em;
             }
+
+            & .tags-list-container {
+                background-color: #AE28F1;
+                border-radius: 12px;
+                color: white;
+
+                & .tags-list {
+                    gap: 0.5rem;
+
+                    & .item-tags {
+                        width: fit-content;
+                        border: 2px solid #560A86;
+                        border-radius: 12px;
+                        padding-block: 0.25em;
+                        padding-inline: 0.5em;
+                        cursor: pointer;
+                        transition: background-color 0.25s ease-out;
+
+                        &.active {
+                            background-color: #560A86;
+                        }
+                    }
+                }
+            }
         }
 
         & .accordion-button:not(.collapsed) {
@@ -161,6 +185,13 @@ main {
                         color: white;
                         border-bottom-color: #AAA;
                     }
+                }
+
+                & .individual-tags {
+                    max-width: 240px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
                 }
             }
         }

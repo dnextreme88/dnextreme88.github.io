@@ -50,7 +50,9 @@ $(document).ready(function () {
     });
 
     const archiveYears = document.getElementById('archive-years-choice');
+    const years = [];
     for (let i = 2014; i <= currentYear; i++) {
+        years.push(i);
         archiveYears.innerHTML += `<option value="${i}">${i}</option>`;
     }
 
@@ -59,10 +61,111 @@ $(document).ready(function () {
         archiveBrands.innerHTML += `<option value="${brand}"></option>`;
     });
 
-    // Charts
+    // Populate tags
+    const tagsList = [];
+
+    items.forEach(obj => {
+        if (obj.tags) {
+            const splittedTags = obj.tags.split(',');
+
+            splittedTags.forEach(tag => {
+                if (!tagsList.includes(tag)) {
+                    tagsList.push(tag);
+                }
+            });
+        }
+    });
+
+    tagsList.sort(function(a, b) { // Sort alphabetically
+        return a === b ? 0 : a < b ? - 1 : 1;
+    });
+
+    const tagsListElement = document.getElementsByClassName('tags-list')[0];
+    tagsList.forEach(tag => tagsListElement.innerHTML += `<li class="item-tags" data-tag-name="${tag}">${tag}</li>`);
+
+    const tags = Object.values(document.getElementsByClassName('item-tags'));
+    tags.forEach(tag => {
+        tag.addEventListener('click', e => {
+            e.preventDefault();
+
+            tag.classList.toggle('active');
+        });
+    });
+
     getTop5HighestPricesChart(allItems);
     getTop5BrandsChart(allItems);
     getTop5MonthsChart(allItems);
+
+    // General statistics
+    const statisticsMonths = [];
+    months.forEach((month, index) => {
+        var monthIndex = index + 1;
+        monthIndex = `-${monthIndex < 10 ? '0' + monthIndex : monthIndex}-`;
+
+        const filterByMonth = allItems.filter(item => item['dateSold'].indexOf(monthIndex) != -1);
+        if (filterByMonth.length > 0) {
+            const sum = filterByMonth.reduce((accumulator, currentValue) => accumulator + currentValue.price, 0);
+
+            statisticsMonths.push({ month: month, count: filterByMonth.length, sum: sum });
+        }
+    });
+
+    const monthMostItems = statisticsMonths.reduce((itemA, itemB) => (itemA.count > itemB.count) ? itemA : itemB);
+    const monthLeastItems = statisticsMonths.reduce((itemA, itemB) => (itemA.count < itemB.count) ? itemA : itemB);
+    const monthMostRevenue = statisticsMonths.reduce((itemA, itemB) => (itemA.sum > itemB.sum) ? itemA : itemB);
+    const monthLeastRevenue = statisticsMonths.reduce((itemA, itemB) => (itemA.sum < itemB.sum) ? itemA : itemB);
+
+    // years
+    const statisticsYears = [];
+    var mostRevenueMadeInAMonthPerYear;
+    var leastRevenueMadeInAMonthPerYear;
+    years.forEach((year) => {
+        const filterByYear = allItems.filter(item => item['dateSold'].indexOf(year) != -1);
+        if (filterByYear.length > 0) {
+            const sum = filterByYear.reduce((accumulator, currentValue) => accumulator + currentValue.price, 0);
+
+            const monthsSum = [];
+            months.forEach((month, index) => {
+                var monthIndex = index + 1;
+                monthIndex = `${year}-${monthIndex < 10 ? '0' + monthIndex : monthIndex}-`;
+
+                const filterByMonth = allItems.filter(item => item['dateSold'].indexOf(monthIndex) != -1);
+                if (filterByMonth.length > 0) {
+                    const sum = filterByMonth.reduce((accumulator, currentValue) => accumulator + currentValue.price, 0);
+                    const objToPush = {month: month, count: filterByMonth.length, sum: sum};
+                    monthsSum.push(objToPush);
+
+                    objToPush.year = year;
+
+                    mostRevenueMadeInAMonthPerYear = !mostRevenueMadeInAMonthPerYear || (objToPush.sum > mostRevenueMadeInAMonthPerYear.sum)
+                        ? objToPush : mostRevenueMadeInAMonthPerYear;
+                    leastRevenueMadeInAMonthPerYear = !leastRevenueMadeInAMonthPerYear || (objToPush.sum < leastRevenueMadeInAMonthPerYear.sum)
+                        ? objToPush : leastRevenueMadeInAMonthPerYear;
+                }
+            });
+
+            statisticsYears.push({ year: year, count: filterByYear.length, sum: sum, months: monthsSum });
+        }
+    });
+
+    const yearMostItems = statisticsYears.reduce((itemA, itemB) => (itemA.count > itemB.count) ? itemA : itemB);
+    const yearLeastItems = statisticsYears.reduce((itemA, itemB) => (itemA.count < itemB.count) ? itemA : itemB);
+    const yearMostRevenue = statisticsYears.reduce((itemA, itemB) => (itemA.sum > itemB.sum) ? itemA : itemB);
+    const yearLeastRevenue = statisticsYears.reduce((itemA, itemB) => (itemA.sum < itemB.sum) ? itemA : itemB);
+
+    const generalStatisticsElement = document.getElementsByClassName('general-statistics-list')[0];
+    generalStatisticsElement.innerHTML += `
+        <li>Most items sold in a month (all-time): ${monthMostItems.count} (${monthMostItems.month})</li>
+        <li>Least items sold in a month (all-time): ${monthLeastItems.count} (${monthLeastItems.month})</li>
+        <li>Most revenue made in a month (all-time): &#8369; ${Number(monthMostRevenue.sum).toLocaleString()} (${monthMostRevenue.month})</li>
+        <li>Least revenue made in a month (all-time): &#8369; ${Number(monthLeastRevenue.sum).toLocaleString()} (${monthLeastRevenue.month})</li>
+        <li>Most items sold in a year: ${yearMostItems.count} (${yearMostItems.year})</li>
+        <li>Least items sold in a year: ${yearLeastItems.count} (${yearLeastItems.year})</li>
+        <li>Most revenue made in a year: &#8369; ${Number(yearMostRevenue.sum).toLocaleString()} (${yearMostRevenue.year})</li>
+        <li>Least revenue made in a year: &#8369; ${Number(yearLeastRevenue.sum).toLocaleString()} (${yearLeastRevenue.year})</li>
+        <li>Most revenue made in a month on a given year: ${mostRevenueMadeInAMonthPerYear.count} items for &#8369; ${Number(mostRevenueMadeInAMonthPerYear.sum).toLocaleString()} (${mostRevenueMadeInAMonthPerYear.month} ${mostRevenueMadeInAMonthPerYear.year})</li>
+        <li>Least revenue made in a month on a given year: ${leastRevenueMadeInAMonthPerYear.count} items for &#8369; ${Number(leastRevenueMadeInAMonthPerYear.sum).toLocaleString()} (${leastRevenueMadeInAMonthPerYear.month} ${leastRevenueMadeInAMonthPerYear.year})</li>
+    `;
 
     console.log('Archives script initialized.');
 });
@@ -128,6 +231,8 @@ function searchAndFilter(type) {
         const brandChoice = document.getElementById('archive-brands-choice').value.toLowerCase();
         const notesChoice = document.getElementById('archive-notes-choice').checked;
         const isSortAlphaChoice = document.getElementById('archive-is-sort-alpha-choice').checked;
+        const activeTagsSelection = Object.values(document.getElementsByClassName('item-tags active'));
+        const activeTags = [];
 
         filteredItems = allItems.filter(obj => {
             return (
@@ -141,6 +246,26 @@ function searchAndFilter(type) {
                 (notesChoice && obj.hasOwnProperty('notes')) || !notesChoice
             );
         });
+
+        activeTagsSelection.forEach(tag => activeTags.push(tag.getAttribute('data-tag-name')));
+
+        if (activeTags.length > 0) { // If at least one tag is selected (denoted with a different background)
+            const filteredItemsWithTags = [];
+
+            activeTags.forEach(tag => {
+                const itemsWithActiveTags = filteredItems.filter(obj => {
+                    const tagsAsArray = obj.tags.split(',');
+
+                    return tagsAsArray.includes(tag);
+                });
+
+                if (itemsWithActiveTags.length > 0) {
+                    itemsWithActiveTags.forEach(obj => filteredItemsWithTags.push(obj));
+                }
+            });
+
+            filteredItems = filteredItemsWithTags;
+        }
 
         if (isSortAlphaChoice) {
             filteredItems.sort(function(a, b) {
@@ -171,6 +296,9 @@ function resetData() {
 
     isFiltering = false;
     filteredItems = [];
+
+    const tags = Object.values(document.getElementsByClassName('item-tags'));
+    tags.forEach(tag => tag.classList.remove('active'));
 
     const alert = document.getElementsByClassName('no-results-found')[0];
     const alertHasResults = document.getElementsByClassName('has-results-found')[0];
@@ -209,7 +337,7 @@ function generateMarkup(items) {
                 </div>
 
                 <table class="table table-striped">
-                    <tr class="price">
+                    <tr>
                         <td>Price</td>
                         <td>&#8369; ${Number(items[index]['price']).toLocaleString()}</td>
                     </tr>
@@ -224,6 +352,10 @@ function generateMarkup(items) {
                     <tr>
                         <td>Sold on</td>
                         <td>${items[index]['dateSold']}</td>
+                    </tr>
+                    <tr>
+                        <td>Tags</td>
+                        <td class="individual-tags" title="${items[index]['tags']}">${items[index]['tags']}</td>
                     </tr>
                 </table>
             </figure>

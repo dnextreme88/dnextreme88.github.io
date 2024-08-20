@@ -52,7 +52,10 @@
         <section class="mb-2 mx-4 d-grid text-center position-relative chart-container">
             <ul class="nav nav-tabs mt-2 border-bottom-0 justify-content-end chart-tabs" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="top5-chart1-tab" data-bs-toggle="tab" data-bs-target="#top5-chart1" type="button" role="tab" aria-controls="top5-chart1" aria-selected="true" aria-hidden="false">Top 5 Most Expensive Items</button>
+                    <button class="nav-link active" id="general-statistics-tab" data-bs-toggle="tab" data-bs-target="#general-statistics" type="button" role="tab" aria-controls="general-statistics" aria-selected="true" aria-hidden="false">General Statistics</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="top5-chart1-tab" data-bs-toggle="tab" data-bs-target="#top5-chart1" type="button" role="tab" aria-controls="top5-chart1" aria-selected="true" aria-hidden="false">Top 5 Most Expensive Items</button>
                 </li>
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="top5-chart2-tab" data-bs-toggle="tab" data-bs-target="#top5-chart2" type="button" role="tab" aria-controls="top5-chart2" aria-selected="false" aria-hidden="true">Top 5 Brands</button>
@@ -63,7 +66,11 @@
             </ul>
 
             <nav class="tab-content">
-                <div class="tab-pane active" id="top5-chart1" role="tabpanel" aria-labelledby="top5-chart1-tab">
+                <div class="tab-pane active" id="general-statistics" role="tabpanel" aria-labelledby="general-statistics-tab">
+                    <!-- PRE-POPULATED -->
+                    <ul class="p-2 list-unstyled bg-white text-dark text-start general-statistics-list"></ul>
+                </div>
+                <div class="tab-pane" id="top5-chart1" role="tabpanel" aria-labelledby="top5-chart1-tab">
                     <canvas class="w-100" id="top5-highest-prices-chart" aria-label="Top 5 archive items with highest prices" role="img"></canvas>
                 </div>
                 <div class="tab-pane" id="top5-chart2" role="tabpanel" aria-labelledby="top5-chart2-tab">
@@ -146,6 +153,13 @@
                                     </div>
                                     <div class="col-12 col-sm-8 col-lg-2 mt-2 d-flex align-items-center">
                                         <input type="checkbox" id="archive-is-sort-alpha-choice" />
+                                    </div>
+
+                                    <div class="col-12 p-2 mt-4 tags-list-container">
+                                        <span class="d-block mt-1 mb-3">Filter by tags:</span>
+
+                                        <!-- PRE-POPULATED -->
+                                        <ul class="d-flex flex-wrap list-unstyled tags-list"></ul>
                                     </div>
 
                                     <div class="col-12 mt-2">
