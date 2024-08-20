@@ -2374,6 +2374,15 @@ const items = [
         tags: 'australia',
         imageLocation: '2024/adidas10-1.jpg'
     },
+    {
+        name: 'RAKK Ilis Outemi Blue Keyboard',
+        price: 900,
+        condition: 'new',
+        size: 'N/A',
+        dateSold: '2024-08-20',
+        tags: '',
+        imageLocation: '2024/rakk2-1.jpg'
+    },
 ];
 
 const brands = [
