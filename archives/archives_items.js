@@ -623,7 +623,7 @@ const items = [
         size: 'L',
         notes: 'Received payment from Buyer through Palawan Express on 10/13, missing receipt.',
         dateSold: '2018-10-13',
-        tags: '',
+        tags: 'worn as house clothes',
         imageLocation: '2018/converse1-1.jpg'
     },
     {
@@ -650,7 +650,7 @@ const items = [
         condition: 'used',
         size: 'XL',
         dateSold: '2018-12-18',
-        tags: '',
+        tags: 'worn as house clothes',
         imageLocation: '2018/adidas5-1.jpg'
     },
     {
@@ -659,7 +659,7 @@ const items = [
         condition: 'used',
         size: 'L',
         dateSold: '2018-12-18',
-        tags: '',
+        tags: 'worn as house clothes',
         imageLocation: '2018/mossimo2-1.jpg'
     },
     {
@@ -695,7 +695,7 @@ const items = [
         condition: 'used',
         size: 'N/A',
         dateSold: '2019-04-09',
-        tags: '',
+        tags: 'received as gift',
         imageLocation: '2019/samsung2-1.jpg'
     },
     {
@@ -826,7 +826,7 @@ const items = [
         condition: 'new',
         size: 'XXL',
         dateSold: '2019-09-30',
-        tags: '',
+        tags: 'bought in night market',
         imageLocation: '2019/pujiqing1-1.jpg'
     },
     {
@@ -919,7 +919,7 @@ const items = [
         condition: 'used',
         size: 'XL or XXL',
         dateSold: '2020-07-05',
-        tags: '',
+        tags: 'worn as house clothes',
         imageLocation: '2020/carhartt1-1.jpg'
     },
     {
@@ -946,7 +946,7 @@ const items = [
         condition: 'new',
         size: 'M or L',
         dateSold: '2020-09-22',
-        tags: 'bought in night market',
+        tags: 'bought in night market,worn as house clothes',
         imageLocation: '2020/nike2-1.jpg'
     },
     {
@@ -1009,7 +1009,7 @@ const items = [
         condition: 'used',
         size: 'XL',
         dateSold: '2020-10-12',
-        tags: '',
+        tags: 'worn as house clothes',
         imageLocation: '2020/adidas6-1.jpg'
     },
     {
@@ -1081,7 +1081,7 @@ const items = [
         condition: 'used',
         size: 'M',
         dateSold: '2021-01-03',
-        tags: '',
+        tags: 'bought in night market',
         imageLocation: '2021/cape-juby1-1.jpg'
     },
     {
@@ -1287,7 +1287,7 @@ const items = [
         size: 'XL',
         notes: 'Buyer picked up on 10/2. Payment picked up on 10/3.',
         dateSold: '2021-10-01',
-        tags: 'australia',
+        tags: 'australia,worn as house clothes',
         imageLocation: '2021/adidas8-1.jpg'
     },
     {
@@ -1459,7 +1459,7 @@ const items = [
         size: 'N/A',
         notes: 'Shipped via LBC. Cash-on-delivery. Received payment on 10/25.',
         dateSold: '2022-10-22',
-        tags: '',
+        tags: 'received as gift',
         imageLocation: '2022/asus1-1.jpg'
     },
     {
@@ -1469,7 +1469,7 @@ const items = [
         size: 'M',
         notes: 'Buyer picked up on 10/28. Payment picked up on 11/5.',
         dateSold: '2022-10-25',
-        tags: 'australia',
+        tags: 'australia,worn as house clothes',
         imageLocation: '2022/american-apparel1-1.jpg'
     },
     {
@@ -1499,7 +1499,7 @@ const items = [
         size: 'M',
         notes: 'Buyer picked up on 2/13. Payment picked up on 2/19.',
         dateSold: '2023-02-13',
-        tags: '',
+        tags: 'received as gift',
         imageLocation: '2023/crooks-and-castles3-1.jpg'
     },
     {
@@ -1822,7 +1822,7 @@ const items = [
         condition: 'used',
         size: 'M',
         dateSold: '2023-07-01',
-        tags: 'australia',
+        tags: 'bought in night market',
         imageLocation: '2023/champion1-1.jpg'
     },
     {
@@ -2162,7 +2162,7 @@ const items = [
         condition: 'new',
         size: 'N/A',
         dateSold: '2024-02-01',
-        tags: 'sold with original box',
+        tags: 'freebies,sold with original box',
         imageLocation: '2024/jedel1-1.jpg',
     },
     {
