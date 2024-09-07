@@ -1126,6 +1126,7 @@ const items = [
         price: 300,
         condition: 'new',
         size: 'XL',
+        notes: 'Payment sent through GCash on 4/17. Received payment on 4/17.',
         dateSold: '2021-04-17',
         tags: 'bought in night market',
         imageLocation: '2021/h-and-m1-1.jpg'
@@ -1388,6 +1389,7 @@ const items = [
         price: 200,
         condition: 'new',
         size: 'M',
+        notes: 'Payment sent through GCash on 8/15. Received payment on 8/16.',
         dateSold: '2022-08-15',
         tags: 'bought in night market',
         imageLocation: '2022/banana-republic1-1.jpg'
