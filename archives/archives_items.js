@@ -2383,6 +2383,25 @@ const items = [
         tags: '',
         imageLocation: '2024/rakk2-1.jpg'
     },
+    {
+        name: 'Tylex RGB Wide Gaming Mousepad',
+        price: 350,
+        condition: 'used',
+        size: 'N/A',
+        notes: 'Payment sent through GCash on 8/31. Received payment on 9/2.',
+        dateSold: '2024-08-31',
+        tags: 'received as gift,sold with original box',
+        imageLocation: '2024/tylex1-1.jpg'
+    },
+    {
+        name: 'Standard Terminator STF-9 Fan',
+        price: 500,
+        condition: 'new',
+        size: 'N/A',
+        dateSold: '2024-09-04',
+        tags: 'received as gift,sold with original box',
+        imageLocation: '2024/standard1-1.jpg'
+    },
 ];
 
 const brands = [
@@ -2524,6 +2543,7 @@ const brands = [
     'Sony',
     'South Pole',
     'Special Force',
+    'Standard',
     'Stanfield\'s',
     'SteelSeries',
     'Superdry',
@@ -2535,6 +2555,7 @@ const brands = [
     'Tender Juicy',
     'The North Face',
     'Tribal',
+    'Tylex',
     'U2',
     'Umbro',
     'Under Armour',
