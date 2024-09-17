@@ -2404,6 +2404,36 @@ const items = [
         tags: 'received as gift,sold with original box',
         imageLocation: '2024/standard1-1.jpg'
     },
+    {
+        name: 'Rayban Sunglasses',
+        price: 200,
+        condition: 'new',
+        size: 'N/A',
+        notes: 'Payment sent through GCash on 9/16. Received payment on 9/17.',
+        dateSold: '2024-09-16',
+        tags: 'australia',
+        imageLocation: '2024/rayban1-1.jpg'
+    },
+    {
+        name: 'Body Specs Sunglasses',
+        price: 250,
+        condition: 'new',
+        size: 'N/A',
+        notes: 'Dropped in Buyer\'s Pines Arcade Theater dropping area. Payment picked up on Buyer\'s dropping area.',
+        dateSold: '2024-09-17',
+        tags: 'australia',
+        imageLocation: '2024/body-specs1-1.jpg'
+    },
+    {
+        name: 'Kathmandu Headlamp',
+        price: 100,
+        condition: 'used',
+        size: 'N/A',
+        notes: 'Dropped in Buyer\'s Pines Arcade Theater dropping area. Payment picked up on Buyer\'s dropping area.',
+        dateSold: '2024-09-17',
+        tags: 'australia',
+        imageLocation: '2024/kathmandu1-1.jpg'
+    },
 ];
 
 const brands = [
@@ -2427,6 +2457,7 @@ const brands = [
     'Beats by Dre',
     'Billabong',
     'BNY Jeans',
+    'Body Specs',
     'Bronson',
     'Burberry',
     'Burmese',
@@ -2481,6 +2512,7 @@ const brands = [
     'Jedel',
     'Jerzees',
     'K-Zone',
+    'Kathmandu',
     'Lacoste',
     'Le Froge',
     'League of Legends',
@@ -2528,6 +2560,7 @@ const brands = [
     'Quiksilver',
     'RAKK',
     'Ralph Lauren',
+    'Rayban',
     'Razer',
     'Reebok',
     'Resident Evil',
