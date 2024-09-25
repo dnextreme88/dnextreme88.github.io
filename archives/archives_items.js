@@ -2434,6 +2434,24 @@ const items = [
         tags: 'australia',
         imageLocation: '2024/kathmandu1-1.jpg'
     },
+    {
+        name: 'Sorel Caribou Winter Boots',
+        price: 200,
+        condition: 'used',
+        size: '10 US or 11 US',
+        dateSold: '2024-09-23',
+        tags: 'australia',
+        imageLocation: '2024/sorel1-1.jpg'
+    },
+    {
+        name: 'Rudy Project Sunglasses',
+        price: 150,
+        condition: 'used',
+        size: 'N/A',
+        dateSold: '2024-09-25',
+        tags: 'australia',
+        imageLocation: '2024/rudy-project1-1.jpg'
+    },
 ];
 
 const brands = [
@@ -2570,12 +2588,14 @@ const brands = [
     'ROMOSS',
     'Rotring',
     'RRJ',
+    'Rudy Project',
     'Samsung',
     'Semir',
     'SKMEI',
     'Soft Blue',
     'Softex',
     'Sony',
+    'Sorel',
     'South Pole',
     'Special Force',
     'Standard',
