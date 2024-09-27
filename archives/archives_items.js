@@ -2377,7 +2377,7 @@ const items = [
         imageLocation: '2024/adidas10-1.jpg'
     },
     {
-        name: 'RAKK Ilis Outemi Blue Keyboard',
+        name: 'RAKK Ilis Outemu Blue Keyboard',
         price: 900,
         condition: 'new',
         size: 'N/A',
