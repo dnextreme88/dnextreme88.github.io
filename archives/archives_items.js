@@ -2452,6 +2452,24 @@ const items = [
         tags: 'australia',
         imageLocation: '2024/rudy-project1-1.jpg'
     },
+    {
+        name: 'PwC Mini Bluetooth / USB Speakers',
+        price: 250,
+        condition: 'new',
+        size: 'N/A',
+        dateSold: '2024-10-14',
+        tags: 'australia',
+        imageLocation: '2024/pwc1-1.jpg'
+    },
+    {
+        name: 'Pleno Massage Gun',
+        price: 200,
+        condition: 'new',
+        size: 'N/A',
+        dateSold: '2024-10-14',
+        tags: 'australia',
+        imageLocation: '2024/pleno1-1.jpg'
+    },
 ];
 
 const brands = [
@@ -2569,12 +2587,14 @@ const brands = [
     'Philips',
     'Philippine',
     'Plane and Spherical Trigonometry',
+    'Pleno',
     'Pokemon',
     'Porsche',
     'Pour Homme',
     'PUBG',
     'Pujiqing',
     'Puma',
+    'PwC',
     'Quiksilver',
     'RAKK',
     'Ralph Lauren',
