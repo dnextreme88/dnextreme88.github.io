@@ -86,7 +86,7 @@ const items = [
         condition: 'used',
         size: 'N/A',
         dateSold: '2015-07-01',
-        tags: 'accessories,sold with original box',
+        tags: 'accessories,female buyer,sold with original box',
         imageLocation: '2015/panasonic1-1.jpg'
     },
     {
@@ -276,7 +276,7 @@ const items = [
         condition: 'used',
         size: 'N/A',
         dateSold: '2016-08-13',
-        tags: 'accessories,sold with original box',
+        tags: 'accessories,female buyer,sold with original box',
         imageLocation: '2016/samsung1-1.jpg'
     },
     {
@@ -303,7 +303,7 @@ const items = [
         condition: 'new',
         size: 'N/A',
         dateSold: '2017-01-03',
-        tags: 'freebies',
+        tags: 'female buyer,freebies',
         imageLocation: '2017/keychain1-1.jpg'
     },
     {
@@ -322,7 +322,7 @@ const items = [
         size: 'N/A',
         notes: 'Not dewormed/vaccinated.',
         dateSold: '2017-03-04',
-        tags: 'animals',
+        tags: 'animals,female buyer',
         imageLocation: '2017/cat1-1.jpg'
     },
     {
@@ -331,7 +331,7 @@ const items = [
         condition: 'new',
         size: 'N/A',
         dateSold: '2017-03-04',
-        tags: 'received as gift,sold with original box',
+        tags: 'female buyer,received as gift,sold with original box',
         imageLocation: '2017/tumbler1-1.jpg'
     },
     {
@@ -467,7 +467,7 @@ const items = [
         condition: 'new',
         size: 'N/A',
         dateSold: '2017-11-07',
-        tags: '',
+        tags: 'female buyer',
         imageLocation: '2017/fujifilm1-1.jpg'
     },
     {
@@ -594,7 +594,7 @@ const items = [
         size: 'N/A',
         notes: 'Sold to Alyza.',
         dateSold: '2018-09-24',
-        tags: 'received as gift,sold to friend',
+        tags: 'female buyer,received as gift,sold to friend',
         imageLocation: '2018/cap1-1.jpg'
     },
     {
@@ -603,7 +603,7 @@ const items = [
         condition: 'new',
         size: 'N/A',
         dateSold: '2018-09-29',
-        tags: 'limited edition',
+        tags: 'female buyer,limited edition',
         imageLocation: '2018/pokemon1-1.jpg'
     },
     {
@@ -613,7 +613,7 @@ const items = [
         size: 'M',
         notes: 'Sold to Alyza.',
         dateSold: '2018-10-06',
-        tags: 'sold to friend',
+        tags: 'female buyer,sold to friend',
         imageLocation: '2018/le-froge1-1.jpg'
     },
     {
@@ -623,7 +623,7 @@ const items = [
         size: 'L',
         notes: 'Received payment from Buyer through Palawan Express on 10/13, missing receipt.',
         dateSold: '2018-10-13',
-        tags: '',
+        tags: 'worn as house clothes',
         imageLocation: '2018/converse1-1.jpg'
     },
     {
@@ -650,7 +650,7 @@ const items = [
         condition: 'used',
         size: 'XL',
         dateSold: '2018-12-18',
-        tags: '',
+        tags: 'worn as house clothes',
         imageLocation: '2018/adidas5-1.jpg'
     },
     {
@@ -659,7 +659,7 @@ const items = [
         condition: 'used',
         size: 'L',
         dateSold: '2018-12-18',
-        tags: '',
+        tags: 'worn as house clothes',
         imageLocation: '2018/mossimo2-1.jpg'
     },
     {
@@ -695,7 +695,7 @@ const items = [
         condition: 'used',
         size: 'N/A',
         dateSold: '2019-04-09',
-        tags: '',
+        tags: 'received as gift',
         imageLocation: '2019/samsung2-1.jpg'
     },
     {
@@ -780,7 +780,7 @@ const items = [
         size: '34',
         notes: 'Buyer picked up on 9/16. Payment picked up on 9/16.',
         dateSold: '2019-09-15',
-        tags: '',
+        tags: 'female buyer',
         imageLocation: '2019/folded-and-hung1-1.jpg'
     },
     {
@@ -808,7 +808,7 @@ const items = [
         condition: 'used',
         size: 'XL',
         dateSold: '2019-09-21',
-        tags: '',
+        tags: 'female buyer',
         imageLocation: '2019/jerzees1-1.jpg'
     },
     {
@@ -826,7 +826,7 @@ const items = [
         condition: 'new',
         size: 'XXL',
         dateSold: '2019-09-30',
-        tags: '',
+        tags: 'bought in night market',
         imageLocation: '2019/pujiqing1-1.jpg'
     },
     {
@@ -845,7 +845,7 @@ const items = [
         condition: 'used',
         size: 'N/A',
         dateSold: '2019-11-07',
-        tags: '',
+        tags: 'female buyer',
         imageLocation: '2019/intex1-1.jpg'
     },
     {
@@ -910,7 +910,7 @@ const items = [
         condition: 'used',
         size: 'N/A',
         dateSold: '2020-07-02',
-        tags: '',
+        tags: 'female buyer',
         imageLocation: '2020/mic1-1.jpg'
     },
     {
@@ -919,7 +919,7 @@ const items = [
         condition: 'used',
         size: 'XL or XXL',
         dateSold: '2020-07-05',
-        tags: '',
+        tags: 'worn as house clothes',
         imageLocation: '2020/carhartt1-1.jpg'
     },
     {
@@ -928,7 +928,7 @@ const items = [
         condition: 'new',
         size: '15.6 inches',
         dateSold: '2020-08-01',
-        tags: '',
+        tags: 'female buyer',
         imageLocation: '2020/lg1-1.jpg'
     },
     {
@@ -937,7 +937,7 @@ const items = [
         condition: 'new',
         size: 'N/A',
         dateSold: '2020-08-17',
-        tags: 'sold with original box',
+        tags: 'female buyer,sold with original box',
         imageLocation: '2020/a4tech1-1.jpg'
     },
     {
@@ -946,7 +946,7 @@ const items = [
         condition: 'new',
         size: 'M or L',
         dateSold: '2020-09-22',
-        tags: 'bought in night market',
+        tags: 'bought in night market,worn as house clothes',
         imageLocation: '2020/nike2-1.jpg'
     },
     {
@@ -991,7 +991,7 @@ const items = [
         condition: 'new',
         size: 'XXL',
         dateSold: '2020-09-26',
-        tags: 'bought in night market',
+        tags: 'female buyer,bought in night market',
         imageLocation: '2020/softex1-1.jpg'
     },
     {
@@ -1009,7 +1009,7 @@ const items = [
         condition: 'used',
         size: 'XL',
         dateSold: '2020-10-12',
-        tags: '',
+        tags: 'female buyer,worn as house clothes',
         imageLocation: '2020/adidas6-1.jpg'
     },
     {
@@ -1018,7 +1018,7 @@ const items = [
         condition: 'new',
         size: 'XL',
         dateSold: '2020-10-12',
-        tags: '',
+        tags: 'female buyer',
         imageLocation: '2020/enyce1-1.jpg'
     },
     {
@@ -1027,7 +1027,7 @@ const items = [
         condition: 'used',
         size: 'XL',
         dateSold: '2020-10-12',
-        tags: 'received as gift',
+        tags: 'female buyer,received as gift',
         imageLocation: '2020/tribal5-1.jpg'
     },
     {
@@ -1081,7 +1081,7 @@ const items = [
         condition: 'used',
         size: 'M',
         dateSold: '2021-01-03',
-        tags: '',
+        tags: 'bought in night market',
         imageLocation: '2021/cape-juby1-1.jpg'
     },
     {
@@ -1126,6 +1126,7 @@ const items = [
         price: 300,
         condition: 'new',
         size: 'XL',
+        notes: 'Payment sent through GCash on 4/17. Received payment on 4/17.',
         dateSold: '2021-04-17',
         tags: 'bought in night market',
         imageLocation: '2021/h-and-m1-1.jpg'
@@ -1177,7 +1178,7 @@ const items = [
         size: 'N/A',
         notes: 'Buyer picked up on 6/30. Payment picked up on 7/2.',
         dateSold: '2021-06-30',
-        tags: '',
+        tags: 'female buyer',
         imageLocation: '2021/philips2-1.jpg'
     },
     {
@@ -1286,7 +1287,7 @@ const items = [
         size: 'XL',
         notes: 'Buyer picked up on 10/2. Payment picked up on 10/3.',
         dateSold: '2021-10-01',
-        tags: 'australia',
+        tags: 'australia,worn as house clothes',
         imageLocation: '2021/adidas8-1.jpg'
     },
     {
@@ -1344,7 +1345,7 @@ const items = [
         condition: 'used',
         size: 'N/A',
         dateSold: '2022-07-16',
-        tags: 'australia',
+        tags: 'australia,female buyer',
         imageLocation: '2022/samsung3-1.jpg'
     },
     {
@@ -1388,6 +1389,7 @@ const items = [
         price: 200,
         condition: 'new',
         size: 'M',
+        notes: 'Payment sent through GCash on 8/15. Received payment on 8/16.',
         dateSold: '2022-08-15',
         tags: 'bought in night market',
         imageLocation: '2022/banana-republic1-1.jpg'
@@ -1418,7 +1420,7 @@ const items = [
         condition: 'new',
         size: '18.5 inches',
         dateSold: '2022-09-12',
-        tags: '',
+        tags: 'female buyer',
         imageLocation: '2022/lg3-1.jpg'
     },
     {
@@ -1457,7 +1459,7 @@ const items = [
         size: 'N/A',
         notes: 'Shipped via LBC. Cash-on-delivery. Received payment on 10/25.',
         dateSold: '2022-10-22',
-        tags: '',
+        tags: 'received as gift',
         imageLocation: '2022/asus1-1.jpg'
     },
     {
@@ -1467,7 +1469,7 @@ const items = [
         size: 'M',
         notes: 'Buyer picked up on 10/28. Payment picked up on 11/5.',
         dateSold: '2022-10-25',
-        tags: 'australia',
+        tags: 'australia,worn as house clothes',
         imageLocation: '2022/american-apparel1-1.jpg'
     },
     {
@@ -1497,7 +1499,7 @@ const items = [
         size: 'M',
         notes: 'Buyer picked up on 2/13. Payment picked up on 2/19.',
         dateSold: '2023-02-13',
-        tags: '',
+        tags: 'received as gift',
         imageLocation: '2023/crooks-and-castles3-1.jpg'
     },
     {
@@ -1527,7 +1529,7 @@ const items = [
         size: 'N/A',
         notes: 'Dropped in Buyer\'s Diego Silang Street dropping area. Payment picked up on Buyer\'s dropping area.',
         dateSold: '2023-02-15',
-        tags: 'received as gift,sold with original box',
+        tags: 'female buyer,received as gift,sold with original box',
         imageLocation: '2023/miniso1-1.jpg'
     },
     {
@@ -1586,7 +1588,7 @@ const items = [
         size: 'N/A',
         notes: 'Buyer picked up on 3/15. Payment picked up on 3/26.',
         dateSold: '2023-03-13',
-        tags: 'freebies',
+        tags: 'female buyer,freebies',
         imageLocation: '2023/powerbank1-1.jpg'
     },
     {
@@ -1644,7 +1646,7 @@ const items = [
         size: 'N/A',
         notes: 'Dropped in Buyer\'s Maharlika dropping area. Payment picked up on Buyer\'s dropping area.',
         dateSold: '2023-04-01',
-        tags: 'camouflage pattern,gaming related',
+        tags: 'camouflage pattern,female buyer,gaming related',
         imageLocation: '2023/pubg1-1.jpg'
     },
     {
@@ -1820,7 +1822,7 @@ const items = [
         condition: 'used',
         size: 'M',
         dateSold: '2023-07-01',
-        tags: 'australia',
+        tags: 'bought in night market',
         imageLocation: '2023/champion1-1.jpg'
     },
     {
@@ -1982,7 +1984,7 @@ const items = [
         condition: 'new',
         size: 'L',
         dateSold: '2023-08-23',
-        tags: 'australia',
+        tags: 'australia,female buyer',
         imageLocation: '2023/adidas9-1.jpg'
     },
     {
@@ -1992,7 +1994,7 @@ const items = [
         size: 'N/A',
         notes: 'Sold to Marie. P500 initially paid through GCash on 9/18 and P1,000 on 9/24. Received payment on 9/28.',
         dateSold: '2023-09-17',
-        tags: 'australia,sold to friend',
+        tags: 'australia,female buyer,sold to friend',
         imageLocation: '2023/microsoft1-1.jpg'
     },
     {
@@ -2060,7 +2062,7 @@ const items = [
         size: '10.5 US',
         notes: 'Buyer picked up on 1/3. Payment picked up on on 1/8.',
         dateSold: '2023-12-03',
-        tags: 'camouflage pattern',
+        tags: 'camouflage pattern,female buyer',
         imageLocation: '2023/puma1-1.jpg'
     },
     {
@@ -2087,7 +2089,7 @@ const items = [
         condition: 'new',
         size: 'N/A',
         dateSold: '2023-12-30',
-        tags: 'australia',
+        tags: 'australia,female buyer',
         imageLocation: '2023/nike7-1.jpg'
     },
     {
@@ -2133,7 +2135,7 @@ const items = [
         condition: 'used',
         size: 'N/A',
         dateSold: '2024-01-14',
-        tags: 'australia',
+        tags: 'australia,female buyer',
         imageLocation: '2024/apple4-1.jpg'
     },
     {
@@ -2151,7 +2153,7 @@ const items = [
         condition: 'used',
         size: 'N/A',
         dateSold: '2024-01-29',
-        tags: 'australia',
+        tags: 'australia,female buyer',
         imageLocation: '2024/telstra1-1.jpg',
     },
     {
@@ -2160,7 +2162,7 @@ const items = [
         condition: 'new',
         size: 'N/A',
         dateSold: '2024-02-01',
-        tags: 'sold with original box',
+        tags: 'female buyer,freebies,sold with original box',
         imageLocation: '2024/jedel1-1.jpg',
     },
     {
@@ -2179,7 +2181,7 @@ const items = [
         size: '2.5 feet x 2 feet',
         notes: 'Initial P3,500 balance originally paid on June 21, 2023 and final P3,500 balance paid on July 6, 2023. Item received on July 12, 2023.',
         dateSold: '2024-02-18',
-        tags: 'customized',
+        tags: 'customized,female buyer',
         imageLocation: '2024/customized1-1.jpg',
     },
     {
@@ -2207,7 +2209,7 @@ const items = [
         size: 'N/A',
         notes: 'Shipped via J&T. Payment sent through GCash on 4/18. Received payment on 4/19.',
         dateSold: '2024-04-19',
-        tags: 'collectibles,freebies,limited edition',
+        tags: 'collectibles,female buyer,freebies,limited edition',
         imageLocation: '2024/oreo2-1.jpg',
     },
     {
@@ -2316,7 +2318,7 @@ const items = [
         condition: 'new',
         size: 'XL',
         dateSold: '2024-07-09',
-        tags: 'australia',
+        tags: 'australia,female buyer',
         imageLocation: '2024/under-armour3-1.jpg',
     },
     {
@@ -2335,7 +2337,7 @@ const items = [
         size: 'N/A',
         notes: 'Sold to Abee. Payment sent through GCash on 7/27. Received payment on 8/7.',
         dateSold: '2024-07-27',
-        tags: 'australia,freebies,sold to friend,sold with original box',
+        tags: 'australia,female buyer,freebies,sold to friend,sold with original box',
         imageLocation: '2024/cadbury1-1.jpg',
     },
     {
@@ -2375,13 +2377,98 @@ const items = [
         imageLocation: '2024/adidas10-1.jpg'
     },
     {
-        name: 'RAKK Ilis Outemi Blue Keyboard',
+        name: 'RAKK Ilis Outemu Blue Keyboard',
         price: 900,
         condition: 'new',
         size: 'N/A',
         dateSold: '2024-08-20',
         tags: '',
         imageLocation: '2024/rakk2-1.jpg'
+    },
+    {
+        name: 'Tylex RGB Wide Gaming Mousepad',
+        price: 350,
+        condition: 'used',
+        size: 'N/A',
+        notes: 'Payment sent through GCash on 8/31. Received payment on 9/2.',
+        dateSold: '2024-08-31',
+        tags: 'received as gift,sold with original box',
+        imageLocation: '2024/tylex1-1.jpg'
+    },
+    {
+        name: 'Standard Terminator STF-9 Fan',
+        price: 500,
+        condition: 'new',
+        size: 'N/A',
+        dateSold: '2024-09-04',
+        tags: 'received as gift,sold with original box',
+        imageLocation: '2024/standard1-1.jpg'
+    },
+    {
+        name: 'Rayban Sunglasses',
+        price: 200,
+        condition: 'new',
+        size: 'N/A',
+        notes: 'Payment sent through GCash on 9/16. Received payment on 9/17.',
+        dateSold: '2024-09-16',
+        tags: 'australia,female buyer',
+        imageLocation: '2024/rayban1-1.jpg'
+    },
+    {
+        name: 'Body Specs Sunglasses',
+        price: 250,
+        condition: 'new',
+        size: 'N/A',
+        notes: 'Dropped in Buyer\'s Pines Arcade Theater dropping area. Payment picked up on Buyer\'s dropping area.',
+        dateSold: '2024-09-17',
+        tags: 'australia',
+        imageLocation: '2024/body-specs1-1.jpg'
+    },
+    {
+        name: 'Kathmandu Headlamp',
+        price: 100,
+        condition: 'used',
+        size: 'N/A',
+        notes: 'Dropped in Buyer\'s Pines Arcade Theater dropping area. Payment picked up on Buyer\'s dropping area.',
+        dateSold: '2024-09-17',
+        tags: 'australia',
+        imageLocation: '2024/kathmandu1-1.jpg'
+    },
+    {
+        name: 'Sorel Caribou Winter Boots',
+        price: 200,
+        condition: 'used',
+        size: '10 US or 11 US',
+        dateSold: '2024-09-23',
+        tags: 'australia',
+        imageLocation: '2024/sorel1-1.jpg'
+    },
+    {
+        name: 'Rudy Project Sunglasses',
+        price: 150,
+        condition: 'used',
+        size: 'N/A',
+        dateSold: '2024-09-25',
+        tags: 'australia',
+        imageLocation: '2024/rudy-project1-1.jpg'
+    },
+    {
+        name: 'PwC Mini Bluetooth / USB Speakers',
+        price: 250,
+        condition: 'new',
+        size: 'N/A',
+        dateSold: '2024-10-14',
+        tags: 'australia',
+        imageLocation: '2024/pwc1-1.jpg'
+    },
+    {
+        name: 'Pleno Massage Gun',
+        price: 200,
+        condition: 'new',
+        size: 'N/A',
+        dateSold: '2024-10-14',
+        tags: 'australia',
+        imageLocation: '2024/pleno1-1.jpg'
     },
 ];
 
@@ -2406,6 +2493,7 @@ const brands = [
     'Beats by Dre',
     'Billabong',
     'BNY Jeans',
+    'Body Specs',
     'Bronson',
     'Burberry',
     'Burmese',
@@ -2460,6 +2548,7 @@ const brands = [
     'Jedel',
     'Jerzees',
     'K-Zone',
+    'Kathmandu',
     'Lacoste',
     'Le Froge',
     'League of Legends',
@@ -2498,15 +2587,18 @@ const brands = [
     'Philips',
     'Philippine',
     'Plane and Spherical Trigonometry',
+    'Pleno',
     'Pokemon',
     'Porsche',
     'Pour Homme',
     'PUBG',
     'Pujiqing',
     'Puma',
+    'PwC',
     'Quiksilver',
     'RAKK',
     'Ralph Lauren',
+    'Rayban',
     'Razer',
     'Reebok',
     'Resident Evil',
@@ -2516,14 +2608,17 @@ const brands = [
     'ROMOSS',
     'Rotring',
     'RRJ',
+    'Rudy Project',
     'Samsung',
     'Semir',
     'SKMEI',
     'Soft Blue',
     'Softex',
     'Sony',
+    'Sorel',
     'South Pole',
     'Special Force',
+    'Standard',
     'Stanfield\'s',
     'SteelSeries',
     'Superdry',
@@ -2535,6 +2630,7 @@ const brands = [
     'Tender Juicy',
     'The North Face',
     'Tribal',
+    'Tylex',
     'U2',
     'Umbro',
     'Under Armour',
