@@ -2470,6 +2470,15 @@ const items = [
         tags: 'australia',
         imageLocation: '2024/pleno1-1.jpg'
     },
+    {
+        name: 'HyperX Cloud II Headset',
+        price: 300,
+        condition: 'used',
+        size: 'N/A',
+        dateSold: '2024-11-05',
+        tags: 'australia',
+        imageLocation: '2024/hyperx3-1.jpg'
+    },
 ];
 
 const brands = [
