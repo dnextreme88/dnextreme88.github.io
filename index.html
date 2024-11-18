@@ -8,366 +8,628 @@
     <meta name="keywords" content="dnextreme88, dnextreme88 portfolio, dnextreme88 github portfolio, jeanne kevin arnmani tibayan decena, jeanne kevin arnmani tibayan decena portfolio, kevin decena, kevin decena portfolio" />
     <title>Kevin's Portfolio</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css" integrity="sha512-siarrzI1u3pCqFG2LEzi87McrBmq6Tp7juVsdmGY1Dr8Saw+ZBAzDzrGwX3vgxX1NkioYNCFOVC0GpDPss10zQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css" integrity="sha512-Z/def5z5u2aR89OuzYcxmDJ0Bnd5V1cKqBEbvLOiUNWdg9PQeXVvXLI90SE4QOHGlfLqUnDNVAYyZi8UwUTmWQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com?plugins=aspect-ratio,line-clamp,container-queries"></script>
 
-    <link rel="stylesheet" href="style.css" />
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.js" integrity="sha512-Ktf+fv0N8ON+ALPwyuXP9d8usxLqqPL5Ox9EHlqxehMM+h1wIU/AeVWFJwVGGFMddw/67P+KGFvFDhZofz2YEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/fontawesome.min.js" integrity="sha512-64O4TSvYybbO2u06YzKDmZfLj/Tcr9+oorWhxzE3yDnmBRf7wvDgQweCzUf5pm2xYTgHMMyk5tW8kWU92JENng==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.min.js" integrity="sha512-fHY2UiQlipUq0dEabSM4s+phmn+bcxSYzXP4vAXItBvBHU7zAM/mkhCZjtBEIJexhOMzZbgFlPLuErlJF2b+0g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
 
     <script src="app.js" defer></script>
 
     <!-- ADDITIONAL -->
-    <link rel="stylesheet" href="index.css" />
+    <!-- <link rel="stylesheet" href="index.css" /> -->
+
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-md header-nav">
-            <div class="container-fluid">
-                <a class="navbar-brand ps-2 logo" href="/" aria-label="KD site logo">KD</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".header-links" aria-controls="header-links" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <div class="bg-background min-h-screen">
+        <div class="container max-w-screen-lg mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <aside class="md:col-span-1">
+                    <div class="rounded-lg border shadow-sm">
+                        <div class="p-6">
+                            <div class="flex flex-col items-start">
+                                <div class="flex flex-row md:flex-col items-center md:items-start w-full gap-4">
+                                    <img alt="Profile picture" loading="lazy" width="150" height="150" decoding="async" class="rounded-full size-12 md:w-full md:h-auto object-cover border-2" src="assets/images/img-profile.webp">
 
-                <div class="collapse navbar-collapse justify-content-end text-end header-links">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle about-dropdown-menu-parent" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
-                            <ul class="dropdown-menu about-dropdown-menu">
-                                <li><a class="text-end dropdown-item" href="#profile">Profile</a></li>
-                                <li><hr class="dropdown-divider" /></li>
-                                <li><a class="text-end dropdown-item" href="#skills">Skills</a></li>
-                                <li><a class="text-end dropdown-item" href="#home-setup">Home Setup Specs</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#portfolio">Portfolio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#misc-links">Links</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-          </nav>
-    </header>
+                                    <div class="flex flex-col items-start justify-center">
+                                        <h1 class="md:mt-4 text-xl md:text-2xl font-bold uppercase">
+                                            <span class="text-xl md:text-[20px] lg:text-[28px]">Jeanne Kevin</span><br />
+                                            <span class="text-xl md:text-[28px] lg:text-[40px]">T. Decena</span>
+                                        </h1>
+                                        <p class="md:text-lg text-gray-600 font-medium">Web Developer</p>
+                                    </div>
+                                </div>
 
-    <main>
-        <section class="d-grid w-100 text-center hero">
-            <h1 class="mb-0 h-100 w-75 intro">Hi, my name is JEANNE KEVIN ARNMANI T. DECENA</h1>
-        </section>
+                                <p class="mt-2 text-start text-sm text-gray-600">Turn problems into solutions. Reach out and let's connect!</p>
 
-        <section class="d-grid align-content-center about hidden">
-            <div id="profile">
-                <figure class="mt-4 mx-auto text-center">
-                    <img src="assets/images/img-profile.webp" class="border border-4 border-info rounded-circle" width="300" height="291" alt="My own image" title="My own image" loading="lazy" />
-                    <figcaption>JEANNE KEVIN ARNMANI TIBAYAN DECENA</figcaption>
-                </figure>
+                                <a href="assets/docs/resume.pdf" class="flex gap-4 items-center justify-center my-4 px-4 py-2 text-white bg-gray-800 w-full font-semibold transition duration-300 hover:text-gray-400" alt="Download resume link" title="Download resume (PDF). Last updated 7/20/24" aria-label="Download resume link" download>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                                    </svg>
+                                    <span class="md:text-center">Download Resume</span>
+                                </a>
 
-                <div class="d-grid mx-auto text-center info">
-                    <div><i class="fa fa-map-marker"></i></div>
-                    <div><span>Baguio City, Philippines 2600</span></div>
-                    <div><i class="fa fa-phone"></i></div>
-                    <div>+639277174174</div>
-                    <div><i class="fa fa-envelope"></i></div>
-                    <div>cross.defect@gmail.com / storm_iz_here@yahoo.com</div>
+                                <div class="mt-4 flex flex-col space-y-2 border-t border-border pt-4 w-full">
+                                    <a target="_blank" aria-label="Github Logo" class="cursor-pointer flex items-center gap-3" href="https://github.com/dnextreme88?tab=repositories">
+                                        <svg class="w-4 h-4" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 496 512" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path>
+                                        </svg>
+                                        <p class="text-sm hover:text-gray-500 transition duration-300">@dnextreme88</p>
+                                    </a>
 
-                    <div class="mt-4 d-grid social-links">
-                        <div><a href="https://www.facebook.com/kevin.tibayan" alt="Facebook link" aria-label="Facebook link"><i class="fab fa-facebook fa-3x"></i></a></div>
-                        <div><a href="https://github.com/dnextreme88?tab=repositories" alt="GitHub repositories" aria-label="GitHub repositories"><i class="fab fa-github fa-3x"></i></a></div>
-                        <div><a href="https://www.linkedin.com/in/jeanne-kevin-decena-b91a1b12a/" alt="LinkedIn link" aria-label="LinkedIn link"><i class="fab fa-linkedin fa-3x"></i></a></div>
-                        <div class="d-grid">
-                            <a href="assets/docs/resume.pdf" class="d-flex align-items-center px-2 download-resume" alt="Download resume link" title="Download resume (PDF). Last updated 7/20/24" aria-label="Download resume link" download>
-                                <i class="fa fa-download fa-2x"></i>
-                                <span>Download Resume</span>
-                            </a>
+                                    <a target="_blank" aria-label="LinkedIn Logo" class="cursor-pointer flex items-center gap-3" href="https://www.linkedin.com/in/jeanne-kevin-decena-b91a1b12a/">
+                                        <svg class="w-4 h-4" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path>
+                                        </svg>
+                                        <p class="text-sm hover:text-gray-500 transition duration-300">/jeanne-kevin-decena</p>
+                                    </a>
+
+                                    <a target="_blank" aria-label="Skype Logo" class="cursor-pointer flex items-center gap-3" href="https://join.skype.com/invite/q6XLRieee7Jr">
+                                        <svg class="w-4 h-4" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.671 0c.88 0 1.733.247 2.468.702a7.42 7.42 0 0 1 6.02 2.118 7.37 7.37 0 0 1 2.167 5.215q0 .517-.072 1.026a4.66 4.66 0 0 1 .6 2.281 4.64 4.64 0 0 1-1.37 3.294A4.67 4.67 0 0 1 11.18 16c-.84 0-1.658-.226-2.37-.644a7.42 7.42 0 0 1-6.114-2.107A7.37 7.37 0 0 1 .529 8.035q0-.545.08-1.081a4.644 4.644 0 0 1 .76-5.59A4.68 4.68 0 0 1 4.67 0zm.447 7.01c.18.309.43.572.729.769a7 7 0 0 0 1.257.653q.737.308 1.145.523c.229.112.437.264.615.448.135.142.21.331.21.528a.87.87 0 0 1-.335.723c-.291.196-.64.289-.99.264a2.6 2.6 0 0 1-1.048-.206 11 11 0 0 1-.532-.253 1.3 1.3 0 0 0-.587-.15.72.72 0 0 0-.501.176.63.63 0 0 0-.195.491.8.8 0 0 0 .148.482 1.2 1.2 0 0 0 .456.354 5.1 5.1 0 0 0 2.212.419 4.6 4.6 0 0 0 1.624-.265 2.3 2.3 0 0 0 1.08-.801c.267-.39.402-.855.386-1.327a2.1 2.1 0 0 0-.279-1.101 2.5 2.5 0 0 0-.772-.792A7 7 0 0 0 8.486 7.3a1 1 0 0 0-.145-.058 18 18 0 0 1-1.013-.447 1.8 1.8 0 0 1-.54-.387.73.73 0 0 1-.2-.508.8.8 0 0 1 .385-.723 1.76 1.76 0 0 1 .968-.247c.26-.003.52.03.772.096q.412.119.802.293c.105.049.22.075.336.076a.6.6 0 0 0 .453-.19.7.7 0 0 0 .18-.496.72.72 0 0 0-.17-.476 1.4 1.4 0 0 0-.556-.354 3.7 3.7 0 0 0-.708-.183 6 6 0 0 0-1.022-.078 4.5 4.5 0 0 0-1.536.258 2.7 2.7 0 0 0-1.174.784 1.9 1.9 0 0 0-.45 1.287c-.01.37.076.736.25 1.063"/>
+                                        </svg>
+                                        <p class="text-sm hover:text-gray-500 transition duration-300">live: storm_iz_here</p>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="text-info">
-                    <blockquote class="w-75 about-quote">
-                        An experienced web developer with a demonstrated history of working in the Information Technology and Services industry. Possesses a Bachelor in Information Technology degree major in Network and Security from the University of the Cordilleras, CAR. I mainly specialize in backend development but can work in frontend as well. Planning to learn Typescript, NestJs, NextJs soon.
+                    <div class="rounded-lg border shadow-sm mt-6">
+                        <div class="flex flex-col space-y-1.5 p-6">
+                            <div class="text-2xl font-semibold leading-none tracking-tight">Skills</div>
+                        </div>
 
-                        <span class="mt-4 d-block fw-bold">Kevin Decena</span>
-                    </blockquote>
-                </div>
+                        <div class="p-6 pt-0">
+                            <div class="flex flex-wrap gap-2">
+                                <div class="rounded-xl py-1 px-3 text-sm bg-gray-500 text-white transition duration-[320ms] hover:translate-y-2">Alpine.js</div>
+                                <div class="rounded-xl py-1 px-3 text-sm bg-gray-500 text-white transition duration-[320ms] hover:translate-y-2">CodeIgniter</div>
+                                <div class="rounded-xl py-1 px-3 text-sm bg-gray-500 text-white transition duration-[320ms] hover:translate-y-2">Django</div>
+                                <div class="rounded-xl py-1 px-3 text-sm bg-gray-500 text-white transition duration-[320ms] hover:translate-y-2">Express.js</div>
+                                <div class="rounded-xl py-1 px-3 text-sm bg-gray-500 text-white transition duration-[320ms] hover:translate-y-2">JavaScript</div>
+                                <div class="rounded-xl py-1 px-3 text-sm bg-gray-500 text-white transition duration-[320ms] hover:translate-y-2">jQuery</div>
+                                <div class="rounded-xl py-1 px-3 text-sm bg-gray-500 text-white transition duration-[320ms] hover:translate-y-2">Laravel</div>
+                                <div class="rounded-xl py-1 px-3 text-sm bg-gray-500 text-white transition duration-[320ms] hover:translate-y-2">Node.js</div>
+                                <div class="rounded-xl py-1 px-3 text-sm bg-gray-500 text-white transition duration-[320ms] hover:translate-y-2">PHP</div>
+                                <div class="rounded-xl py-1 px-3 text-sm bg-gray-500 text-white transition duration-[320ms] hover:translate-y-2">Python</div>
+                                <div class="rounded-xl py-1 px-3 text-sm bg-gray-500 text-white transition duration-[320ms] hover:translate-y-2">React</div>
+                                <div class="rounded-xl py-1 px-3 text-sm bg-gray-500 text-white transition duration-[320ms] hover:translate-y-2">Tailwind CSS</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rounded-lg border shadow-sm mt-6">
+                        <div class="flex flex-col space-y-1.5 p-6">
+                            <div class="text-2xl font-semibold leading-none tracking-tight">Home Setup Specs</div>
+                        </div>
+
+                        <div class="p-6 pt-0">
+                            <div class="flex flex-wrap gap-2 flex-col space-y-1">
+                                <div class="even:font-bold">Internet Service Provider (ISP)</div>
+                                <div class="even:font-bold">PLDT 200Mbp/s</div>
+                                <div class="even:font-bold">Memory</div>
+                                <div class="even:font-bold">TEAMGROUP T-Force Delta RGB White 16GB (2x8GB) DDR4 3600MHz</div>
+                                <div class="even:font-bold">Webcam</div>
+                                <div class="even:font-bold">GSou T16s 1080p</div>
+                                <div class="even:font-bold">Monitor</div>
+                                <div class="even:font-bold">Viewplus ML-24HI 23.8" IPS FLAT 165hz Monitor x2</div>
+                                <div class="even:font-bold">GPU</div>
+                                <div class="even:font-bold">MSi RTX 4060 Ventus 2X White OC 8GB GDDR6</div>
+                                <div class="even:font-bold">PSU</div>
+                                <div class="even:font-bold">Corsair RM850 850W White</div>
+                                <div class="even:font-bold">CPU</div>
+                                <div class="even:font-bold">AMD Ryzen 7 5700X AM4</div>
+                                <div class="even:font-bold">CPU AIO Cooler</div>
+                                <div class="even:font-bold">NZXT Kraken X53 RGB White</div>
+                                <div class="even:font-bold">SSD 1</div>
+                                <div class="even:font-bold">Kingston NV2 NVMe M.2 500GB</div>
+                                <div class="even:font-bold">SSD 2</div>
+                                <div class="even:font-bold">ADATA NVME 1TB SSD</div>
+                                <div class="even:font-bold">Motherboard</div>
+                                <div class="even:font-bold">MSi B550M PRO-VDH Wifi AM4</div>
+                                <div class="even:font-bold">Fans</div>
+                                <div class="even:font-bold">NZXT F120 RGB Core Fans x5</div>
+                                <div class="even:font-bold">Computer Case</div>
+                                <div class="even:font-bold">NZXT H7 Flow White</div>
+                                <div class="even:font-bold">Speakers</div>
+                                <div class="even:font-bold">Redragon Calliope GS580</div>
+                                <div class="even:font-bold">Keyboard</div>
+                                <div class="even:font-bold">AULA F87 TKL Wireless Mechanical Keyboard</div>
+                                <div class="even:font-bold">Mouse</div>
+                                <div class="even:font-bold">Redragon Woki Supperlight Wireless Gaming Mouse</div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <main class="md:col-span-2">
+                    <div class="rounded-lg border shadow-sm mb-6">
+                        <div class="flex flex-col space-y-1.5 p-6">
+                            <div class="text-2xl font-semibold leading-none tracking-tight">About Me</div>
+                        </div>
+
+                        <div class="p-6 pt-0">
+                            <p class="text-gray-600">An experienced full-stack web developer with a knack of building impactful websites, turning your visitors into loyal customers, helping brands succeed, and empowering customer satisfaction. Let's turn your dreams into reality - and let us set you apart from the competition!</p>
+                        </div>
+                    </div>
+
+                    <h2 class="text-xl font-bold mb-4">Featured Projects</h2>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                        <div class="rounded-lg border shadow-sm">
+                            <div class="p-6 pt-6">
+                                <a class="font-semibold text-lg hover:underline">Chatsmith Online Services</a>
+
+                                <p class="text-sm text-gray-600 mt-1">An employee management system built on the TALL stack. Currently developing</p>
+
+                                <div class="flex items-center justify-between mt-4">
+                                    <div class="flex items-center space-x-2">
+                                        <div class="size-3 rounded-full bg-red-500"></div>
+                                        <span class="text-sm font-medium text-gray-600">Laravel</span>
+                                    </div>
+
+                                    <a class="text-sm text-primary hover:underline" href="https://github.com/dnextreme88/Chatsmith-Online-Services-Laravel">View Project
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link inline-block w-3 h-3 ml-1">
+                                            <path d="M15 3h6v6"></path>
+                                            <path d="M10 14 21 3"></path>
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="rounded-lg border shadow-sm">
+                            <div class="p-6 pt-6">
+                                <a class="font-semibold text-lg hover:underline">Steam Review Editor</a>
+
+                                <p class="text-sm text-gray-600 mt-1">A fork that can easily create and format Steam reviews</p>
+
+                                <div class="flex items-center justify-between mt-4">
+                                    <div class="flex items-center space-x-2">
+                                        <div class="size-3 rounded-full bg-orange-500"></div>
+                                        <span class="text-sm font-medium text-gray-600">HTML</span>
+                                    </div>
+
+                                    <a class="text-sm text-primary hover:underline" href="https://github.com/dnextreme88/steam-review-editor">View Project
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link inline-block w-3 h-3 ml-1">
+                                            <path d="M15 3h6v6"></path>
+                                            <path d="M10 14 21 3"></path>
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="rounded-lg border shadow-sm">
+                            <div class="p-6 pt-6">
+                                <a class="font-semibold text-lg hover:underline">Vanguard Essay Checker</a>
+
+                                <p class="text-sm text-gray-600 mt-1">A web application that utilizes natural language processing (NLP) to grade essays submitted by students in an online platform</p>
+
+                                <div class="flex items-center justify-between mt-4">
+                                    <div class="flex items-center space-x-2">
+                                        <div class="size-3 rounded-full bg-blue-500"></div>
+                                        <span class="text-sm font-medium text-gray-600">PHP</span>
+                                    </div>
+
+                                    <a class="text-sm text-primary hover:underline" href="https://github.com/dnextreme88/EssayCheckerSystem">View Project
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link inline-block w-3 h-3 ml-1">
+                                            <path d="M15 3h6v6"></path>
+                                            <path d="M10 14 21 3"></path>
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="rounded-lg border shadow-sm">
+                            <div class="p-6 pt-6">
+                                <a class="font-semibold text-lg hover:underline">The Mind Bomber</a>
+
+                                <p class="text-sm text-gray-600 mt-1">A simple mobile application that has varying difficulties to test a user's intelligence in answering different questions</p>
+
+                                <div class="flex items-center justify-between mt-4">
+                                    <div class="flex items-center space-x-2">
+                                        <div class="size-3 rounded-full bg-orange-800"></div>
+                                        <span class="text-sm font-medium text-gray-600">Java</span>
+                                    </div>
+
+                                    <a class="text-sm text-primary hover:underline" href="https://github.com/dnextreme88/The-Mind-Bomber">View Project
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link inline-block w-3 h-3 ml-1">
+                                            <path d="M15 3h6v6"></path>
+                                            <path d="M10 14 21 3"></path>
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="text-xl font-bold mb-4">Work Experience</h2>
+
+                    <div class="rounded-lg border shadow-sm">
+                        <div class="p-6 pt-6">
+                            <ul class="space-y-8">
+                                <li class="border-b border-b-gray-400 last:border-b-0 pb-8 last:pb-0">
+                                    <div class="flex gap-8 justify-start lg:gap-12 items-center space-x-4">
+                                        <svg class="w-12 h-12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier">
+                                                <g clip-path="url(#clip0_429_10983)">
+                                                    <path d="M4 4.00104H20V18.001C20 19.1056 19.1046 20.001 18 20.001H6C4.89543 20.001 4 19.1056 4 18.001V4.00104Z" stroke="#292929" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path d="M9 7H15L11 17" stroke="#292929" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_429_10983">
+                                                        <rect width="24" height="24" fill="white"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </g>
+                                        </svg>
+
+                                        <div class="flex flex-col space-y-2 w-full">
+                                            <h3 class="font-semibold text-2xl">Zeldan Nordic Languages Review Center</h3>
+                                            <h3 class="text-xl">Laravel Developer</h3>
+
+                                            <div class="flex justify-between gap-2 md:gap-0 flex-col md:flex-row">
+                                                <p class="text-lg flex items-center gap-2">
+                                                    <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M8 2v4"></path>
+                                                        <path d="M16 2v4"></path>
+                                                        <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                                                        <path d="M3 10h18"></path>
+                                                        <path d="M8 14h.01"></path>
+                                                        <path d="M12 14h.01"></path>
+                                                        <path d="M16 14h.01"></path>
+                                                        <path d="M8 18h.01"></path>
+                                                        <path d="M12 18h.01"></path>
+                                                        <path d="M16 18h.01"></path>
+                                                    </svg>
+                                                    <span>June 2024 - December 2024</span>
+                                                </p>
+                                                <p class="text-lg">Onsite</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <ul class="mt-8 list-disc list-inside">
+                                        <li>Develop a simple learning website for trainees and instructors for their language training courses using the TALL stack (Tailwind, AlpineJS, Laravel, and Livewire)</li>
+                                    </ul>
+                                </li>
+
+                                <li class="border-b border-b-gray-400 last:border-b-0 pb-8 last:pb-0">
+                                    <div class="flex gap-8 justify-start lg:gap-12 items-center space-x-4">
+                                        <svg class="w-12 h-12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier">
+                                                <g clip-path="url(#clip0_429_10984)">
+                                                    <path d="M4 4.00104H20V18.001C20 19.1056 19.1046 20.001 18 20.001H6C4.89543 20.001 4 19.1056 4 18.001V4.00104Z" stroke="#292929" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path d="M12.9999 7L9.47502 12.3793M15 14C15 15.6569 13.6569 17 12 17C10.3431 17 9 15.6569 9 14C9 12.3431 10.3431 11 12 11C13.6569 11 15 12.3431 15 14Z" stroke="#292929" stroke-width="2.5" stroke-linecap="round"></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_429_10984">
+                                                        <rect width="24" height="24" fill="white"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </g>
+                                        </svg>
+
+                                        <div class="flex flex-col space-y-2 w-full">
+                                            <h3 class="font-semibold text-2xl">Think Bullish</h3>
+                                            <h3 class="text-xl">Virtual Assistant</h3>
+
+                                            <div class="flex justify-between gap-2 md:gap-0 flex-col md:flex-row">
+                                                <p class="text-lg flex items-center gap-2">
+                                                    <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M8 2v4"></path>
+                                                        <path d="M16 2v4"></path>
+                                                        <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                                                        <path d="M3 10h18"></path>
+                                                        <path d="M8 14h.01"></path>
+                                                        <path d="M12 14h.01"></path>
+                                                        <path d="M16 14h.01"></path>
+                                                        <path d="M8 18h.01"></path>
+                                                        <path d="M12 18h.01"></path>
+                                                        <path d="M16 18h.01"></path>
+                                                    </svg>
+                                                    <span>January 2024 - August 2024</span>
+                                                </p>
+                                                <p class="text-lg">Remote</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <ul class="mt-8 list-disc list-inside">
+                                        <li>Assist in workflow automations, ensure updated data, and review prospect leads using GoHighLevel CRM</li>
+                                        <li>Review calls made by appointment setters for quality assurance</li>
+                                        <li>Review leads for the waitlist process and check if they conflict with any existing active clients</li>
+                                    </ul>
+                                </li>
+
+                                <li class="border-b border-b-gray-400 last:border-b-0 pb-8 last:pb-0">
+                                    <div class="flex gap-8 justify-start lg:gap-12 items-center space-x-4">
+                                        <svg class="w-12 h-12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier">
+                                                <g clip-path="url(#clip0_429_11049)">
+                                                    <path d="M4 4.00104H20V18.001C20 19.1056 19.1046 20.001 18 20.001H6C4.89543 20.001 4 19.1056 4 18.001V4.00104Z" stroke="#292929" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path d="M9.5 16.2361C10.0308 16.7111 10.7316 17 11.5 17C13.1569 17 14.5 15.6569 14.5 14C14.5 12.3431 13.1569 11 11.5 11C10.7316 11 10.0308 11.2889 9.5 11.7639L10.5 7H14.5" stroke="#292929" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_429_11049">
+                                                        <rect width="24" height="24" fill="white"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </g>
+                                        </svg>
+
+                                        <div class="flex flex-col space-y-2 w-full">
+                                            <h3 class="font-semibold text-2xl">Professional Software Solutions Philippines</h3>
+                                            <h3 class="text-xl">Full Stack Web Developer</h3>
+
+                                            <div class="flex justify-between gap-2 md:gap-0 flex-col md:flex-row">
+                                                <p class="text-lg flex items-center gap-2">
+                                                    <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M8 2v4"></path>
+                                                        <path d="M16 2v4"></path>
+                                                        <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                                                        <path d="M3 10h18"></path>
+                                                        <path d="M8 14h.01"></path>
+                                                        <path d="M12 14h.01"></path>
+                                                        <path d="M16 14h.01"></path>
+                                                        <path d="M8 18h.01"></path>
+                                                        <path d="M12 18h.01"></path>
+                                                        <path d="M16 18h.01"></path>
+                                                    </svg>
+                                                    <span>January 2022 - November 2023</span>
+                                                </p>
+                                                <p class="text-lg">Hybrid</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <ul class="mt-8 list-disc list-inside">
+                                        <li>Create API to interact between documentation and survey sites</li>
+                                        <li>Develop and maintain client's 2 decade-old therapeutic websites using 56 PHP and CodeIgniter 2 framework</li>
+                                        <li>Fix non-responsive webpages using new and modern front-end layout standards</li>
+                                    </ul>
+                                </li>
+
+                                <li class="border-b border-b-gray-400 last:border-b-0 pb-8 last:pb-0">
+                                    <div class="flex gap-8 justify-start lg:gap-12 items-center space-x-4">
+                                        <svg class="w-12 h-12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier">
+                                                <g clip-path="url(#clip0_429_10985)">
+                                                    <path d="M4 4.00104H20V18.001C20 19.1056 19.1046 20.001 18 20.001H6C4.89543 20.001 4 19.1056 4 18.001V4.00104Z" stroke="#292929" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path d="M10.5 7L9.22841 11.4506C8.86337 12.7282 9.8227 14 11.1515 14H14.5M14.5 14V10M14.5 14V17" stroke="#292929" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_429_10985">
+                                                        <rect width="24" height="24" fill="white"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </g>
+                                        </svg>
+
+                                        <div class="flex flex-col space-y-2 w-full">
+                                            <h3 class="font-semibold text-2xl">eFlexervices, Inc.</h3>
+                                            <h3 class="text-xl">Web Developer</h3>
+
+                                            <div class="flex justify-between gap-2 md:gap-0 flex-col md:flex-row">
+                                                <p class="text-lg flex items-center gap-2">
+                                                    <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M8 2v4"></path>
+                                                        <path d="M16 2v4"></path>
+                                                        <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                                                        <path d="M3 10h18"></path>
+                                                        <path d="M8 14h.01"></path>
+                                                        <path d="M12 14h.01"></path>
+                                                        <path d="M16 14h.01"></path>
+                                                        <path d="M8 18h.01"></path>
+                                                        <path d="M12 18h.01"></path>
+                                                        <path d="M16 18h.01"></path>
+                                                    </svg>
+                                                    <span>July 2021 - January 2022</span>
+                                                </p>
+                                                <p class="text-lg">Remote</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <ul class="mt-8 list-disc list-inside">
+                                        <li>Convert C# .NET Core implementation of SEO backend website to NodeJs code</li>
+                                        <li>Create a simple Software Documentation of the CXP (customer experience) NodeJs implementation of the original backend project built with C#</li>
+                                        <li>Implement SEO audits to Victorious' clients made by eFlex SEO specialists</li>
+                                        <li>Web scraping using Puppeteer and experience with AWS APIs</li>
+                                    </ul>
+                                </li>
+
+                                <li class="border-b border-b-gray-400 last:border-b-0 pb-8 last:pb-0">
+                                    <div class="flex gap-8 justify-start lg:gap-12 items-center space-x-4">
+                                        <svg class="w-12 h-12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier">
+                                                <g clip-path="url(#clip0_429_11144)">
+                                                    <path d="M4 4.00104H20V18.001C20 19.1056 19.1046 20.001 18 20.001H6C4.89543 20.001 4 19.1056 4 18.001V4.00104Z" stroke="#292929" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path d="M10 16.2361C10.5308 16.7111 11.2316 17 12 17C13.6569 17 15 15.6569 15 14C15 12.3431 13.6569 11 12 11L15 7H10" stroke="#292929" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_429_11144">
+                                                        <rect width="24" height="24" fill="white"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </g>
+                                        </svg>
+
+                                        <div class="flex flex-col space-y-2 w-full">
+                                            <h3 class="font-semibold text-2xl">Thrive Media</h3>
+                                            <h3 class="text-xl">Laravel Developer / IT Lead</h3>
+
+                                            <div class="flex justify-between gap-2 md:gap-0 flex-col md:flex-row">
+                                                <p class="text-lg flex items-center gap-2">
+                                                    <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M8 2v4"></path>
+                                                        <path d="M16 2v4"></path>
+                                                        <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                                                        <path d="M3 10h18"></path>
+                                                        <path d="M8 14h.01"></path>
+                                                        <path d="M12 14h.01"></path>
+                                                        <path d="M16 14h.01"></path>
+                                                        <path d="M8 18h.01"></path>
+                                                        <path d="M12 18h.01"></path>
+                                                        <path d="M16 18h.01"></path>
+                                                    </svg>
+                                                    <span>October 2019 - June 2021</span>
+                                                </p>
+                                                <p class="text-lg">Remote</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <ul class="mt-8 list-disc list-inside">
+                                        <li>Audit the website's page speed insights using Google PageSpeed Insights</li>
+                                        <li>Develop local websites for client using PHP 7 and Laravel 6</li>
+                                        <li>Modify plugins and themes for a freelance WordPress website</li>
+                                        <li>Redesign and improve page speed performance of Homepage and Contact Us pages for AgentSupportTeam client using just HTML and CSS</li>
+                                        <li>Write the software documentation of websites developed for UCC client</li>
+                                    </ul>
+                                </li>
+
+                                <li class="border-b border-b-gray-400 last:border-b-0 pb-8 last:pb-0">
+                                    <div class="flex gap-8 justify-start lg:gap-12 items-center space-x-4">
+                                        <svg class="w-12 h-12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier">
+                                                <g clip-path="url(#clip0_429_11264)">
+                                                    <path d="M4 4.00104H20V18.001C20 19.1056 19.1046 20.001 18 20.001H6C4.89543 20.001 4 19.1056 4 18.001V4.00104Z" stroke="#292929" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path d="M9.50012 9.49997C9.50013 8.86017 9.7442 8.22037 10.2324 7.73221C11.2087 6.7559 12.7916 6.7559 13.7679 7.73221C14.7442 8.70852 14.7442 10.2914 13.7679 11.2677L9.93946 15.0962C9.65816 15.3775 9.50012 15.759 9.50012 16.1568L9.50012 17H14.5001" stroke="#292929" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_429_11264">
+                                                        <rect width="24" height="24" fill="white"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </g>
+                                        </svg>
+
+                                        <div class="flex flex-col space-y-2 w-full">
+                                            <h3 class="font-semibold text-2xl">Chatsmith Online Services</h3>
+                                            <h3 class="text-xl">Chat Support / Data Entry Specialist</h3>
+
+                                            <div class="flex justify-between gap-2 md:gap-0 flex-col md:flex-row">
+                                                <p class="text-lg flex items-center gap-2">
+                                                    <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M8 2v4"></path>
+                                                        <path d="M16 2v4"></path>
+                                                        <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                                                        <path d="M3 10h18"></path>
+                                                        <path d="M8 14h.01"></path>
+                                                        <path d="M12 14h.01"></path>
+                                                        <path d="M16 14h.01"></path>
+                                                        <path d="M8 18h.01"></path>
+                                                        <path d="M12 18h.01"></path>
+                                                        <path d="M16 18h.01"></path>
+                                                    </svg>
+                                                    <span>June 2019 - October 2019</span>
+                                                </p>
+                                                <p class="text-lg">Onsite</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <ul class="mt-8 list-disc list-inside">
+                                        <li>As a chat support representative, assist and help in the inquiries of clients who are using the platform in PersistIQ</li>
+                                        <li>As a data entry specialist, process invoices by inputting line items and accurately identify its price, quantity, unit of measurement etc. of clients in the food and beverages industry using the PlateIQ platform</li>
+                                        <li>As a shelf cam labeler, identify out-of-stock, messy and invalid products on a grocery stall taken using a shelf camera using the Focal platform</li>
+                                    </ul>
+                                </li>
+
+                                <li class="border-b border-b-gray-400 last:border-b-0 pb-8 last:pb-0">
+                                    <div class="flex gap-8 justify-start lg:gap-12 items-center space-x-4">
+                                        <svg class="w-12 h-12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier">
+                                                <g clip-path="url(#clip0_429_10987)">
+                                                    <path d="M4 4.00104H20V18.001C20 19.1056 19.1046 20.001 18 20.001H6C4.89543 20.001 4 19.1056 4 18.001V4.00104Z" stroke="#292929" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path d="M12.5 17V7L10.5 9" stroke="#292929" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_429_10987">
+                                                        <rect width="24" height="24" fill="white"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </g>
+                                        </svg>
+
+                                        <div class="flex flex-col space-y-2 w-full">
+                                            <h3 class="font-semibold text-2xl">Virtual Web Assist, Inc.</h3>
+                                            <h3 class="text-xl">Senior Python Backend Developer</h3>
+
+                                            <div class="flex justify-between gap-2 md:gap-0 flex-col md:flex-row">
+                                                <p class="text-lg flex items-center gap-2">
+                                                    <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M8 2v4"></path>
+                                                        <path d="M16 2v4"></path>
+                                                        <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                                                        <path d="M3 10h18"></path>
+                                                        <path d="M8 14h.01"></path>
+                                                        <path d="M12 14h.01"></path>
+                                                        <path d="M16 14h.01"></path>
+                                                        <path d="M8 18h.01"></path>
+                                                        <path d="M12 18h.01"></path>
+                                                        <path d="M16 18h.01"></path>
+                                                    </svg>
+                                                    <span>December 2017 - May 2019</span>
+                                                </p>
+                                                <p class="text-lg">Onsite</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <ul class="mt-8 list-disc list-inside">
+                                        <li>Deploy APIs using Docker containers</li>
+                                        <li>Develop POS systems of different payment types using Loyverse</li>
+                                        <li>Expose and consume APIs for self-made cryptocurrency called BitPal (based on Bitcoin) using Python 3, and Django 2.2 framework</li>
+                                        <li>Maintain security of BitShares wallets in the Blockchain technology</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </main>
+
+                <footer class="mt-6 md:col-span-3">
+                    <div class="flex items-center justify-between flex-col md:flex-row gap-4 md:gap-0 text-center md:text-start">
+                        <div>
+                            <p>Copyright &copy; 2024 by Kevin Decena</p>
+                            <p>Per DTI-NCR Permit No. 11192024, Series of 2024.</p>
+                        </div>
+
+                        <!-- TODO: TO ADD ARCHIVES LINK HERE -->
+                        <div>
+                            <p>All rights reserved.</p>
+                        </div>
+                    </div>
+                </footer>
             </div>
-
-            <div class="d-grid my-4 text-center" id="skills">
-                <h2 class="top">Skills <sup><a href="#" class="info-help" data-bs-title="Skills Help" data-bs-content="These are the technologies I have tried." data-toggle="popover" aria-label="Toggle info help" aria-haspopup="dialog"><i class="fa fa-info-circle"></i></a></sup></h2>
-                <div class="left">
-                    <h3 class="skill-title">Frontend</h3>
-
-                    <div class="d-grid mb-2 frontend">
-                        <i class="devicon-bootstrap-plain icon-size"></i></li>
-                        <span class="fw-bold skill-name">Bootstrap</span>
-                        <span class="skill-level">Intermediate</span>
-                    </div>
-
-                    <div class="d-grid mb-2 frontend">
-                        <i class="devicon-css3-plain icon-size"></i></li>
-                        <span class="fw-bold skill-name">CSS 3</span>
-                        <span class="skill-level">Intermediate</span>
-                    </div>
-
-                    <div class="d-grid mb-2 frontend">
-                        <i class="devicon-html5-plain icon-size"></i></li>
-                        <span class="fw-bold skill-name">HTML5</span>
-                        <span class="skill-level">Intermediate</span>
-                    </div>
-
-                    <div class="d-grid mb-2 frontend">
-                        <i class="devicon-javascript-plain icon-size"></i></li>
-                        <span class="fw-bold skill-name">JavaScript</span>
-                        <span class="skill-level">Intermediate</span>
-                    </div>
-
-                    <div class="d-grid mb-2 frontend">
-                        <i class="devicon-jquery-plain icon-size"></i></li>
-                        <span class="fw-bold skill-name">jQuery</span>
-                        <span class="skill-level">Intermediate</span>
-                    </div>
-
-                    <div class="d-grid mb-2 frontend">
-                        <i class="devicon-react-plain icon-size"></i></li>
-                        <span class="fw-bold skill-name">React</span>
-                        <span class="skill-level">Intermediate</span>
-                    </div>
-
-                    <div class="d-grid mb-2 frontend">
-                        <i class="devicon-sass-plain icon-size"></i></li>
-                        <span class="fw-bold skill-name">Sass</span>
-                        <span class="skill-level">Beginner</span>
-                    </div>
-                </div>
-                <div class="middle">
-                    <h3 class="skill-title">Backend</h3>
-
-                    <div class="d-grid mb-2 backend">
-                        <i class="devicon-dotnetcore-plain icon-size"></i></li>
-                        <span class="fw-bold skill-name">.NET Core</span>
-                        <span class="skill-level">Beginner</span>
-                    </div>
-
-                    <div class="d-grid mb-2 backend">
-                        <i class="devicon-csharp-plain icon-size"></i></li>
-                        <span class="fw-bold skill-name">C#</span>
-                        <span class="skill-level">Beginner</span>
-                    </div>
-
-                    <div class="d-grid mb-2 backend">
-                        <i class="devicon-codeigniter-plain icon-size"></i></li>
-                        <span class="fw-bold skill-name">CodeIgniter</span>
-                        <span class="skill-level">Intermediate</span>
-                    </div>
-
-                    <div class="d-grid mb-2 backend">
-                        <i class="devicon-django-plain icon-size"></i></li>
-                        <span class="fw-bold skill-name">Django</span>
-                        <span class="skill-level">Beginner</span>
-                    </div>
-
-                    <div class="d-grid mb-2 backend">
-                        <i class="devicon-express-original icon-size"></i></li>
-                        <span class="fw-bold skill-name">Express</span>
-                        <span class="skill-level">Expert</span>
-                    </div>
-
-                    <div class="d-grid mb-2 backend">
-                        <i class="devicon-java-plain icon-size"></i></li>
-                        <span class="fw-bold skill-name">Java</span>
-                        <span class="skill-level">Beginner</span>
-                    </div>
-
-                    <div class="d-grid mb-2 backend">
-                        <i class="devicon-laravel-plain icon-size"></i></li>
-                        <span class="fw-bold skill-name">Laravel</span>
-                        <span class="skill-level">Intermediate</span>
-                    </div>
-
-                    <div class="d-grid mb-2 backend">
-                        <i class="devicon-mysql-plain icon-size"></i></li>
-                        <span class="fw-bold skill-name">MySQL</span>
-                        <span class="skill-level">Intermediate</span>
-                    </div>
-
-                    <div class="d-grid mb-2 backend">
-                        <i class="devicon-nodejs-plain icon-size"></i></li>
-                        <span class="fw-bold skill-name">NodeJS</span>
-                        <span class="skill-level">Expert</span>
-                    </div>
-
-                    <div class="d-grid mb-2 backend">
-                        <i class="devicon-php-plain icon-size"></i></li>
-                        <span class="fw-bold skill-name">PHP</span>
-                        <span class="skill-level">Expert</span>
-                    </div>
-
-                    <div class="d-grid mb-2 backend">
-                        <i class="devicon-postgresql-plain icon-size"></i></li>
-                        <span class="fw-bold skill-name">PostgreSQL</span>
-                        <span class="skill-level">Intermediate</span>
-                    </div>
-
-                    <div class="d-grid mb-2 backend">
-                        <i class="devicon-python-plain icon-size"></i></li>
-                        <span class="fw-bold skill-name">Python</span>
-                        <span class="skill-level">Beginner</span>
-                    </div>
-                </div>
-                <div class="right">
-                    <h3 class="skill-title">Other Skills</h3>
-
-                    <div class="d-grid mb-2 others">
-                        <i class="devicon-git-plain icon-size"></i></li>
-                        <span class="fw-bold skill-name">Git</span>
-                        <span class="skill-level">Intermediate</span>
-                    </div>
-
-                    <div class="d-grid mb-2 others">
-                        <i class="devicon-graphql-plain icon-size"></i></li>
-                        <span class="fw-bold skill-name">GraphQL</span>
-                        <span class="skill-level">Beginner</span>
-                    </div>
-
-                    <div class="d-grid mb-2 others">
-                        <i class="devicon-wordpress-plain icon-size"></i></li>
-                        <span class="fw-bold skill-name">WordPress</span>
-                        <span class="skill-level">Beginner</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="my-4 text-center" id="home-setup">
-                <h2>Home Setup Specs <sup><a href="#" class="info-help" data-bs-title="Home Setup Specs Help" data-bs-content="Specs for a WFH setup. I built my own PC on December 21, 2023 using the parts below (those without dates were included in my initial build)" data-toggle="popover" aria-label="Toggle info help" aria-haspopup="dialog"><i class="fa fa-info-circle"></i></a></sup></h2>
-                <div class="d-grid home-setup-list">
-                    <div>Internet Service Provider (ISP)</div>
-                    <div>PLDT 20Mbp/s</div>
-                    <div>Memory</div>
-                    <div>TEAMGROUP T-Force Delta RGB White 16GB (2x8GB) DDR4 3600MHz</div>
-                    <div>Webcam</div>
-                    <div>GSou T16s 1080p <small>(8/11/20)</small></div>
-                    <div>Monitor</div>
-                    <div>Viewplus ML-24HI 23.8" IPS FLAT 165hz Monitor x2 <small>(7/31/22)</small></div>
-                    <div>GPU</div>
-                    <div>MSi RTX 4060 Ventus 2X White OC 8GB GDDR6</div>
-                    <div>PSU</div>
-                    <div>Corsair RM850 850W White</div>
-                    <div>CPU</div>
-                    <div>AMD Ryzen 7 5700X AM4</div>
-                    <div>CPU AIO Cooler</div>
-                    <div>NZXT Kraken X53 RGB White</div>
-                    <div>SSD 1</div>
-                    <div>Kingston NV2 NVMe M.2 500GB</div>
-                    <div>SSD 2</div>
-                    <div>ADATA NVME 1TB SSD <small>(1/11/24)</small></div>
-                    <div>Motherboard</div>
-                    <div>MSi B550M PRO-VDH Wifi AM4</div>
-                    <div>Fans</div>
-                    <div>NZXT F120 RGB Core Fans x5 <small>(2/10/24) x (5/5/24)</small></div>
-                    <div>Computer Case</div>
-                    <div>NZXT H7 Flow White</div>
-                    <div>Speakers</div>
-                    <div>Redragon Calliope GS580 <small>(5/23/24)</small></div>
-                    <div>Keyboard</div>
-                    <div>AULA F87 TKL Wireless Mechanical Keyboard <small>(8/15/24)</small></div>
-                    <div>Mouse</div>
-                    <div>Redragon Woki Supperlight Wireless Gaming Mouse <small>(5/6/24)</small></div>
-                </div>
-            </div>
-        </section>
-
-        <section class="hidden" id="portfolio">
-            <h2>Portfolio</h2>
-
-            <figure class="mt-4 mx-auto text-center">
-                <img src="assets/images/bg-portfolio-1.webp" class="border border-4" width="300" height="90" alt="GDG DevFest Baguio 2016 image" title="GDG DevFest Baguio 2016 image" loading="lazy" />
-                <figcaption>- Volunteered to document the GDG DevFest Baguio 2016 event held on November 5, 2016 at the University of the Cordilleras, Baguio City <small>(<a href="assets/docs/write-up.pdf" title="Download write-up (PDF)" aria-label="Download write-up link" download>download</a>)</small></figcaption>
-            </figure>
-
-            <figure class="mt-4 mx-auto text-center">
-                <img src="assets/images/bg-portfolio-2.webp" width="100%" height="100%" alt="Vanguard Essay Checker System image" title="Vanguard Essay Checker System image" loading="lazy" />
-                <figcaption>- A <a href="https://github.com/dnextreme88/EssayCheckerSystem" aria-label="Essay Checker System GitHub repository">simple web application</a> that grades classroom essays based on quality of essay content using natural language processing (NLP). This was developed using raw PHP with basic HTML and CSS. Finished way back on 2017 for our Capstone 2 class.</figcaption>
-            </figure>
-
-            <figure class="mt-4 mx-auto text-center">
-                <img src="assets/images/bg-portfolio-3.webp" width="100%" height="100%" alt="COS Employee Management System image" title="COS Employee Management System image" loading="lazy" />
-                <figcaption>- An <a href="https://github.com/dnextreme88/Chatsmith-Online-Services-Laravel" aria-label="COS GitHub repository">employee management system</a> with the ability to clock-in/clock-out and record hourly tasks via a form. Initially developed with Laravel 6, the project has been recently upgraded to Laravel 10.</figcaption>
-            </figure>
-        </section>
-
-        <section class="hidden" id="misc-links">
-            <h2>Miscellaneous Links</h2>
-            <p>Basically anything else that I do that's not related to my IT career.</p>
-
-            <figure class="mt-4 mx-auto text-center">
-                <h3>CS Source: Random Bot Chatter plugin</h3>
-                <img src="assets/images/bg-misc-1.webp" width="75%" height="100%" alt="Random Bot Chatter plugin image" title="Random Bot Chatter plugin image" loading="lazy" />
-                <figcaption>- A <a href="https://github.com/dnextreme88/cs-source-bot-chatter-random" aria-label="SourceMod plugin GitHub repository">SourceMod plugin</a> that introduces random bot chatter to CS Source like in CS 1.3.</figcaption>
-            </figure>
-
-            <figure class="mt-4 mx-auto text-center">
-                <h3>CS Source: Teamkill Announce plugin</h3>
-                <img src="assets/images/bg-misc-2.webp" width="75%" height="100%" alt="Teamkill Announce plugin image" title="Teamkill Announce plugin image" loading="lazy" />
-                <figcaption>- A <a href="https://github.com/dnextreme88/cs-source-teamkill-announce" aria-label="SourceMod plugin GitHub repository">SourceMod plugin</a> that announces teamkill to everyone on chat with its own count.</figcaption>
-            </figure>
-
-            <figure class="mt-4 mx-auto text-center">
-                <h3>CS Source: Teammate Hurt Get HP plugin</h3>
-                <img src="assets/images/bg-misc-3.webp" width="75%" height="100%" alt="Teammate Hurt Get HP plugin image" title="Teammate Hurt Get HP plugin image" loading="lazy" />
-                <figcaption>- A <a href="https://github.com/dnextreme88/cs-source-teammate-hurt-get-hp" aria-label="SourceMod plugin GitHub repository">SourceMod plugin</a> that replaces message on chat when attacking a teammate with HP left</figcaption>
-            </figure>
-
-            <figure class="mt-4 mx-auto text-center">
-                <h3>CS Source: ProXP plugin (forked)</h3>
-                <img src="assets/images/bg-misc-4.webp" width="75%" height="100%" alt="ProXP plugin image" title="ProXP plugin image" loading="lazy" />
-                <figcaption>- A <a href="https://github.com/dnextreme88/cs-source-pro-xp" aria-label="SourceMod plugin GitHub repository">SourceMod plugin</a> forked from vishusandy's <a href="https://github.com/vishusandy/ProXP" aria-label="SourceMod plugin GitHub repository">ProXP plugin</a> with my personal modifications by adding a first blood and games count tracker. This plugin requires a local server running, as it uses a database to track stats.</figcaption>
-            </figure>
-
-            <figure class="mt-4 mx-auto text-center">
-                <h3>GTA San Andreas: NPC Tuning CLEO mod (forked)</h3>
-                <img src="assets/images/bg-misc-5.webp" width="75%" height="100%" alt="NPC Tuning CLEO mod image" title="NPC Tuning CLEO mod image" loading="lazy" />
-                <figcaption>- A <a href="https://github.com/dnextreme88/gta-sa-npc-tuning" aria-label="CLEO mod GitHub repository">CLEO mod</a> forked from JuniorDjjr's <a href="https://gist.github.com/JuniorDjjr/a68191d9f4b5fb642c7f658ca9c1b8bf" aria-label="NPC Tuning mod GitHub gist">NPC Tuning mod gist</a> to spawn cars with car parts more frequently on the streets.</figcaption>
-            </figure>
-
-            <figure class="mt-4 mx-auto text-center">
-                <h3>State of Decay: YOSE: Playable Milo Eldridge with Gurubani Kaur (Story Only) mod</h3>
-                <img src="assets/images/bg-misc-6.webp" width="75%" height="100%" alt="Playable Milo Eldridge with Gurubani Kaur (Story Only) mod image" title="Playable Milo Eldridge with Gurubani Kaur (Story Only) mod image" loading="lazy" />
-                <figcaption>- Adds <a href="https://www.nexusmods.com/stateofdecay/mods/499" target="_blank" aria-label="State of Decay: YOSE Nexus Mods link">Milo Eldridge of Lifeline to YOSE story mode</a>. This mod doesn't just add Gurubani Kaur to your Enclave when using the Bonus Survivor radio command, but also Milo Eldridge as well.</figcaption>
-            </figure>
-
-            <figure class="mt-4 mx-auto text-center">
-                <h3>State of Decay: YOSE: Wider Outpost and Homesite Radius mod</h3>
-                <img src="assets/images/bg-misc-7.webp" width="75%" height="100%" alt="Wider Outpost and Homesite Radius mod image" title="Wider Outpost and Homesite Radius mod image" loading="lazy" />
-                <figcaption>- Increases the default <a href="https://www.nexusmods.com/stateofdecay/mods/502" target="_blank" aria-label="State of Decay: YOSE Nexus Mods link">outpost radius and homesite radius</a> by a considerable amount.</figcaption>
-            </figure>
-
-            <p class="w-75">- I'm also a technical writer, writing simple gaming guides in plaintext format, published at GameFAQs. <a href="https://gamefaqs.gamespot.com/community/dnextreme88/contributions" target="_blank" aria-label="GameFAQs link">Here is the link to my contributions page</a>.</p>
-        </section>
-    </main>
-
-    <footer>
-        <ul class="ms-4 pt-2 list-unstyled">
-            <li><a href="/archives/">Archives</a></li>
-        </ul>
-
-        <div class="text-center">
-            <p>All right reserved.</p>
-            <p>Copyright &copy; <span class="current-year"></span> by Kevin Decena.</p>
-            <p>Per DTI-NCR Permit No. 11022023, Series of 2023.</p>
         </div>
-    </footer>
-
-    <button class="d-none btn-go-to-top" title="Go to top"><i class="fa fa-caret-up"></i> Top</button>
+    </div>
 </body>
 </html>
