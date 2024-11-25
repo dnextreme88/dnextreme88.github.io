@@ -2479,6 +2479,15 @@ const items = [
         tags: 'australia',
         imageLocation: '2024/hyperx3-1.jpg'
     },
+    {
+        name: 'Cotton On Pants',
+        price: 250,
+        condition: 'new',
+        size: '34',
+        dateSold: '2024-11-25',
+        tags: 'received as gift',
+        imageLocation: '2024/cotton-on1-1.jpg'
+    },
 ];
 
 const brands = [
@@ -2518,6 +2527,7 @@ const brands = [
     'Colorado',
     'Converse',
     'Corsair',
+    'Cotton On',
     'Crooks and Castles',
     'Cukui',
     'Culture',
