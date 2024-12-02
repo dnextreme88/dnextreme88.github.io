@@ -2488,6 +2488,16 @@ const items = [
         tags: 'received as gift',
         imageLocation: '2024/cotton-on1-1.jpg'
     },
+    {
+        name: 'Cordillera History and Festivals Book',
+        price: 100,
+        condition: 'new',
+        size: 'N/A',
+        notes: 'Buyer picked up on on 12/1. Payment sent through GCash on 11/28. Received payment on 12/2.',
+        dateSold: '2024-11-29',
+        tags: '',
+        imageLocation: '2024/book5-1.jpg'
+    },
 ];
 
 const brands = [
@@ -2526,6 +2536,7 @@ const brands = [
     'College Algebra',
     'Colorado',
     'Converse',
+    'Cordillera History and Festivals',
     'Corsair',
     'Cotton On',
     'Crooks and Castles',
