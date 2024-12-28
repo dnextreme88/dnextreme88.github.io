@@ -2495,8 +2495,18 @@ const items = [
         size: 'N/A',
         notes: 'Buyer picked up on on 12/1. Payment sent through GCash on 11/28. Received payment on 12/2.',
         dateSold: '2024-11-29',
-        tags: '',
+        tags: 'female buyer',
         imageLocation: '2024/book5-1.jpg'
+    },
+    {
+        name: 'Programs and Services for MSMEs Book',
+        price: 100,
+        condition: 'new',
+        size: 'N/A',
+        notes: 'Buyer picked up on 12/17. Payment picked up on 12/28.',
+        dateSold: '2024-12-16',
+        tags: 'educational,female buyer',
+        imageLocation: '2024/book6-1.jpg'
     },
 ];
 
