@@ -2508,6 +2508,37 @@ const items = [
         tags: 'educational,female buyer',
         imageLocation: '2024/book6-1.jpg'
     },
+    {
+        name: 'Umbro Shorts',
+        price: 250,
+        condition: 'new',
+        size: 'L',
+        notes: 'Shipped via J&T. Payment sent through GCash on 1/5. Received payment on 1/9.',
+        dateSold: '2025-01-06',
+        tags: 'australia',
+        imageLocation: '2025/umbro2-1.jpg'
+    },
+    {
+        name: 'Lamborghini Murcielago LP670-4 SV Toy',
+        price: 250,
+        condition: 'new',
+        size: '1/24 scale',
+        notes: 'Buyer picked up on 1/7. Payment picked up on 1/13.',
+        dateSold: '2025-01-06',
+        tags: '',
+        imageLocation: '2025/lamborghini1-1.jpg'
+    },
+    // TODO: TO UPDATE NOTES ON WHEN BUYER PICKED UP ITEM
+    {
+        name: 'Ferrari F355 Berlinetta Toy',
+        price: 300,
+        condition: 'new',
+        size: '1/24 scale',
+        notes: 'Buyer picked up on 1/?. Payment sent through GCash on 1/7. Received payment on 1/13.',
+        dateSold: '2025-01-08',
+        tags: '',
+        imageLocation: '2025/ferrari1-1.jpg'
+    },
 ];
 
 const brands = [
@@ -2564,6 +2595,7 @@ const brands = [
     'Ergophobia',
     'Everlast',
     'Fantech',
+    'Ferrari',
     'FIFA World Cup',
     'Florsheim',
     'Folded and Hung',
@@ -2590,6 +2622,7 @@ const brands = [
     'K-Zone',
     'Kathmandu',
     'Lacoste',
+    'Lamborghini',
     'Le Froge',
     'League of Legends',
     'Lee',
